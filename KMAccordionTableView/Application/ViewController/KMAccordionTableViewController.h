@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KMSection.h"
+
 
 @class KMAccordionTableViewController;
 @class KMSection;

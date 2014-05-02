@@ -8,7 +8,6 @@
 
 #import "KMAccordionTableViewController.h"
 #import "KMSectionHeaderView.h"
-#import "KMSection.h"
 
 @interface KMAccordionTableViewController () <KMSectionHeaderViewDelegate>
 
@@ -74,20 +73,20 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    KMSectionHeaderView *sectionHeaderView = [self.tableView dequeueReusableHeaderFooterViewWithIdentifier:SectionHeaderViewIdentifier];
+    KMSectionHeaderView *sectionHeaderView = (KMSectionHeaderView*)[self.tableView dequeueReusableHeaderFooterViewWithIdentifier:SectionHeaderViewIdentifier];
 
     KMSection *currentSection = [self.dataSource accordionTableView:self sectionForRowAtIndex:section];
 
     currentSection.headerView = sectionHeaderView;
-
+    
     sectionHeaderView.titleLabel.text = currentSection.title;
     [sectionHeaderView setSection:section];
     [sectionHeaderView setDelegate:self];
     [sectionHeaderView setHeaderDisclosureButtonImage:self.headerDisclosureButtonImage];
     [sectionHeaderView setHeaderFont:self.headerFont];
     [sectionHeaderView setHeaderTitleColor:self.headerTitleColor];
-    [sectionHeaderView setHeaderColor:self.headerColor];
     [sectionHeaderView setHeaderSeparatorColor:self.headerSeparatorColor];
+    [sectionHeaderView setHeaderColor:self.headerColor];
 
     return sectionHeaderView;
 }

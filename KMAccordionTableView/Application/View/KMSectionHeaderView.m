@@ -43,7 +43,7 @@
 }
 
 - (void)setHeaderColor:(UIColor *)headerColor {
-    self.contentView.backgroundColor = headerColor;
+    self.backgroundHeaderView.backgroundColor = headerColor;
 }
 
 - (void)setHeaderFont:(UIFont *)headerFont {

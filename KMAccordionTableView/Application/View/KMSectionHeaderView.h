@@ -31,6 +31,7 @@
 @property(weak, nonatomic) IBOutlet UIView *headerSeparatorView;
 @property(nonatomic, strong) UIImage *headerDisclosureButtonImage;
 @property(nonatomic) NSInteger section;
+@property (weak, nonatomic) IBOutlet UIView *backgroundHeaderView;
 
 - (void)toggleOpenWithUserAction:(BOOL)userAction;
 

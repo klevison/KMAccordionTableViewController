@@ -7,7 +7,6 @@
 //
 
 #import "MyViewController.h"
-#import "KMSection.h"
 
 @interface MyViewController () <KMAccordionTableViewControllerDataSource>
 
