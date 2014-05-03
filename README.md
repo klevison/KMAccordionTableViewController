@@ -14,7 +14,15 @@ Accordion UITableViewController component based on Apples's example.
 @end
 ```
 
-### Implement from KMAccordionTableViewControllerDataSource
+### Implement KMAccordionTableViewControllerDataSource
+
+```objective-c
+- (NSInteger)numberOfSectionsInAccordionTableViewController:(KMAccordionTableViewController *)accordionTableView;
+
+- (KMSection *)accordionTableView:(KMAccordionTableViewController *)accordionTableView sectionForRowAtIndex:(NSInteger)index;
+```
+
+### Example
 
 ```objective-c
 #import "MyViewController.h"
