@@ -1,8 +1,6 @@
-KMAccordionTableViewController
-==============================
+# KMAccordionTableViewController [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/NHCalendarActivity/badge.png)](http://cocoapods.org/?q=name%3AKMAccordionTableViewController%2A) [![Cocoapods](https://cocoapod-badges.herokuapp.com/p/NHCalendarActivity/badge.png)](http://cocoapods.org/?q=name%3AKMAccordionTableViewController%2A)
 
 Accordion UITableViewController component based on Apples's example.
-
 
 ## How to use it?
 
