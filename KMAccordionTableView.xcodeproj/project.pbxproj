@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		29E4B9DF27AF4A5091AA180D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4337C41C534E848E097F3F /* libPods.a */; };
-		BE10C071191412C600601CB0 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE10C070191412C600601CB0 /* MyViewController.m */; };
+		BE6F060B1914970100C6BB7A /* KMSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6F06011914970100C6BB7A /* KMSection.m */; };
+		BE6F060E1914970100C6BB7A /* KMAccordionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6F06081914970100C6BB7A /* KMAccordionTableViewController.m */; };
+		BE6F060F1914970100C6BB7A /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6F060A1914970100C6BB7A /* MyViewController.m */; };
+		BE6F06141914978400C6BB7A /* KMSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6F06121914978400C6BB7A /* KMSectionHeaderView.m */; };
+		BE6F06151914978400C6BB7A /* KMSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE6F06131914978400C6BB7A /* KMSectionHeaderView.xib */; };
 		BEEF458F1912B094001C57AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF458E1912B094001C57AA /* Foundation.framework */; };
 		BEEF45911912B094001C57AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF45901912B094001C57AA /* CoreGraphics.framework */; };
 		BEEF45931912B094001C57AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF45921912B094001C57AA /* UIKit.framework */; };
@@ -21,12 +25,8 @@
 		BEEF45AA1912B094001C57AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEF45921912B094001C57AA /* UIKit.framework */; };
 		BEEF45B21912B094001C57AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEEF45B01912B094001C57AA /* InfoPlist.strings */; };
 		BEEF45B41912B094001C57AA /* KMAccordionTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF45B31912B094001C57AA /* KMAccordionTableViewTests.m */; };
-		BEEF45C11912B15E001C57AA /* KMAccordionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF45C01912B15E001C57AA /* KMAccordionTableViewController.m */; };
-		BEEF45C51912B28B001C57AA /* KMSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF45C41912B28B001C57AA /* KMSectionHeaderView.m */; };
-		BEEF45C71912B2A4001C57AA /* KMSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEF45C61912B2A4001C57AA /* KMSectionHeaderView.xib */; };
 		BEEF45CF1912B343001C57AA /* carat-open.png in Resources */ = {isa = PBXBuildFile; fileRef = BEEF45CD1912B343001C57AA /* carat-open.png */; };
 		BEEF45D01912B343001C57AA /* carat.png in Resources */ = {isa = PBXBuildFile; fileRef = BEEF45CE1912B343001C57AA /* carat.png */; };
-		BEEF45D41912B425001C57AA /* KMSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF45D31912B425001C57AA /* KMSection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,15 @@
 /* Begin PBXFileReference section */
 		924FCAF1317B4EFAAD2A23C4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BA4337C41C534E848E097F3F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE10C06F191412C600601CB0 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		BE10C070191412C600601CB0 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		BE6F06001914970100C6BB7A /* KMSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSection.h; sourceTree = "<group>"; };
+		BE6F06011914970100C6BB7A /* KMSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSection.m; sourceTree = "<group>"; };
+		BE6F06071914970100C6BB7A /* KMAccordionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMAccordionTableViewController.h; sourceTree = "<group>"; };
+		BE6F06081914970100C6BB7A /* KMAccordionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewController.m; sourceTree = "<group>"; };
+		BE6F06091914970100C6BB7A /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		BE6F060A1914970100C6BB7A /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		BE6F06111914978400C6BB7A /* KMSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSectionHeaderView.h; sourceTree = "<group>"; };
+		BE6F06121914978400C6BB7A /* KMSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSectionHeaderView.m; sourceTree = "<group>"; };
+		BE6F06131914978400C6BB7A /* KMSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KMSectionHeaderView.xib; sourceTree = "<group>"; };
 		BEEF458B1912B094001C57AA /* KMAccordionTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMAccordionTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF458E1912B094001C57AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BEEF45901912B094001C57AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,15 +67,8 @@
 		BEEF45AF1912B094001C57AA /* KMAccordionTableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMAccordionTableViewTests-Info.plist"; sourceTree = "<group>"; };
 		BEEF45B11912B094001C57AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEEF45B31912B094001C57AA /* KMAccordionTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewTests.m; sourceTree = "<group>"; };
-		BEEF45BF1912B15E001C57AA /* KMAccordionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMAccordionTableViewController.h; sourceTree = "<group>"; };
-		BEEF45C01912B15E001C57AA /* KMAccordionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewController.m; sourceTree = "<group>"; };
-		BEEF45C31912B28B001C57AA /* KMSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSectionHeaderView.h; sourceTree = "<group>"; };
-		BEEF45C41912B28B001C57AA /* KMSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSectionHeaderView.m; sourceTree = "<group>"; };
-		BEEF45C61912B2A4001C57AA /* KMSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KMSectionHeaderView.xib; sourceTree = "<group>"; };
 		BEEF45CD1912B343001C57AA /* carat-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carat-open.png"; sourceTree = "<group>"; };
 		BEEF45CE1912B343001C57AA /* carat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carat.png; sourceTree = "<group>"; };
-		BEEF45D21912B425001C57AA /* KMSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSection.h; sourceTree = "<group>"; };
-		BEEF45D31912B425001C57AA /* KMSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +96,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE6F05FE1914970100C6BB7A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BE6F05FF1914970100C6BB7A /* Model */,
+				BE6F06101914978400C6BB7A /* Header */,
+				BE6F06061914970100C6BB7A /* ViewController */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BE6F05FF1914970100C6BB7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE6F06001914970100C6BB7A /* KMSection.h */,
+				BE6F06011914970100C6BB7A /* KMSection.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE6F06061914970100C6BB7A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE6F06071914970100C6BB7A /* KMAccordionTableViewController.h */,
+				BE6F06081914970100C6BB7A /* KMAccordionTableViewController.m */,
+				BE6F06091914970100C6BB7A /* MyViewController.h */,
+				BE6F060A1914970100C6BB7A /* MyViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BE6F06101914978400C6BB7A /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				BE6F06111914978400C6BB7A /* KMSectionHeaderView.h */,
+				BE6F06121914978400C6BB7A /* KMSectionHeaderView.m */,
+				BE6F06131914978400C6BB7A /* KMSectionHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		BEEF45821912B094001C57AA = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +171,7 @@
 		BEEF45941912B094001C57AA /* KMAccordionTableView */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF45BD1912B100001C57AA /* Application */,
+				BE6F05FE1914970100C6BB7A /* Classes */,
 				BEEF459D1912B094001C57AA /* AppDelegate.h */,
 				BEEF459E1912B094001C57AA /* AppDelegate.m */,
 				BEEF45A01912B094001C57AA /* Images.xcassets */,
@@ -170,38 +210,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BEEF45BD1912B100001C57AA /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				BEEF45D11912B40E001C57AA /* Model */,
-				BEEF45C21912B238001C57AA /* View */,
-				BEEF45BE1912B100001C57AA /* ViewController */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		BEEF45BE1912B100001C57AA /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BEEF45BF1912B15E001C57AA /* KMAccordionTableViewController.h */,
-				BEEF45C01912B15E001C57AA /* KMAccordionTableViewController.m */,
-				BE10C06F191412C600601CB0 /* MyViewController.h */,
-				BE10C070191412C600601CB0 /* MyViewController.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		BEEF45C21912B238001C57AA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BEEF45C31912B28B001C57AA /* KMSectionHeaderView.h */,
-				BEEF45C41912B28B001C57AA /* KMSectionHeaderView.m */,
-				BEEF45C61912B2A4001C57AA /* KMSectionHeaderView.xib */,
-			);
-			name = View;
-			path = KMAccordionTableView/Application/View;
-			sourceTree = SOURCE_ROOT;
-		};
 		BEEF45C81912B319001C57AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,15 +217,6 @@
 				BEEF45CE1912B343001C57AA /* carat.png */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		BEEF45D11912B40E001C57AA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BEEF45D21912B425001C57AA /* KMSection.h */,
-				BEEF45D31912B425001C57AA /* KMSection.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,9 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEEF45C71912B2A4001C57AA /* KMSectionHeaderView.xib in Resources */,
 				BEEF45991912B094001C57AA /* InfoPlist.strings in Resources */,
 				BEEF45A11912B094001C57AA /* Images.xcassets in Resources */,
+				BE6F06151914978400C6BB7A /* KMSectionHeaderView.xib in Resources */,
 				BEEF45CF1912B343001C57AA /* carat-open.png in Resources */,
 				BEEF45D01912B343001C57AA /* carat.png in Resources */,
 			);
@@ -352,12 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE10C071191412C600601CB0 /* MyViewController.m in Sources */,
+				BE6F060F1914970100C6BB7A /* MyViewController.m in Sources */,
+				BE6F06141914978400C6BB7A /* KMSectionHeaderView.m in Sources */,
+				BE6F060B1914970100C6BB7A /* KMSection.m in Sources */,
 				BEEF459F1912B094001C57AA /* AppDelegate.m in Sources */,
-				BEEF45C51912B28B001C57AA /* KMSectionHeaderView.m in Sources */,
 				BEEF459B1912B094001C57AA /* main.m in Sources */,
-				BEEF45C11912B15E001C57AA /* KMAccordionTableViewController.m in Sources */,
-				BEEF45D41912B425001C57AA /* KMSection.m in Sources */,
+				BE6F060E1914970100C6BB7A /* KMAccordionTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
