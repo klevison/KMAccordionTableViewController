@@ -51,20 +51,20 @@
 		BE6F06111914978400C6BB7A /* KMSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSectionHeaderView.h; sourceTree = "<group>"; };
 		BE6F06121914978400C6BB7A /* KMSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSectionHeaderView.m; sourceTree = "<group>"; };
 		BE6F06131914978400C6BB7A /* KMSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KMSectionHeaderView.xib; sourceTree = "<group>"; };
-		BEEF458B1912B094001C57AA /* KMAccordionTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMAccordionTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEEF458B1912B094001C57AA /* KMAccordionTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMAccordionTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF458E1912B094001C57AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BEEF45901912B094001C57AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BEEF45921912B094001C57AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		BEEF45961912B094001C57AA /* KMAccordionTableView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMAccordionTableView-Info.plist"; sourceTree = "<group>"; };
+		BEEF45961912B094001C57AA /* KMAccordionTableViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMAccordionTableViewController-Info.plist"; sourceTree = "<group>"; };
 		BEEF45981912B094001C57AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEEF459A1912B094001C57AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BEEF459C1912B094001C57AA /* KMAccordionTableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KMAccordionTableView-Prefix.pch"; sourceTree = "<group>"; };
+		BEEF459C1912B094001C57AA /* KMAccordionTableViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KMAccordionTableViewController-Prefix.pch"; sourceTree = "<group>"; };
 		BEEF459D1912B094001C57AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEEF459E1912B094001C57AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BEEF45A01912B094001C57AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BEEF45A61912B094001C57AA /* KMAccordionTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMAccordionTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEEF45A61912B094001C57AA /* KMAccordionTableViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMAccordionTableViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF45A71912B094001C57AA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		BEEF45AF1912B094001C57AA /* KMAccordionTableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMAccordionTableViewTests-Info.plist"; sourceTree = "<group>"; };
+		BEEF45AF1912B094001C57AA /* KMAccordionTableViewControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMAccordionTableViewControllerTests-Info.plist"; sourceTree = "<group>"; };
 		BEEF45B11912B094001C57AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEEF45B31912B094001C57AA /* KMAccordionTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewTests.m; sourceTree = "<group>"; };
 		BEEF45CD1912B343001C57AA /* carat-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carat-open.png"; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		BEEF45821912B094001C57AA = {
 			isa = PBXGroup;
 			children = (
-				BEEF45941912B094001C57AA /* KMAccordionTableView */,
+				BEEF45941912B094001C57AA /* KMAccordionTableViewController */,
 				BEEF45AD1912B094001C57AA /* KMAccordionTableViewTests */,
 				BEEF458D1912B094001C57AA /* Frameworks */,
 				BEEF458C1912B094001C57AA /* Products */,
@@ -150,8 +150,8 @@
 		BEEF458C1912B094001C57AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF458B1912B094001C57AA /* KMAccordionTableView.app */,
-				BEEF45A61912B094001C57AA /* KMAccordionTableViewTests.xctest */,
+				BEEF458B1912B094001C57AA /* KMAccordionTableViewController.app */,
+				BEEF45A61912B094001C57AA /* KMAccordionTableViewControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BEEF45941912B094001C57AA /* KMAccordionTableView */ = {
+		BEEF45941912B094001C57AA /* KMAccordionTableViewController */ = {
 			isa = PBXGroup;
 			children = (
 				BE6F05FE1914970100C6BB7A /* Classes */,
@@ -178,16 +178,17 @@
 				BEEF45C81912B319001C57AA /* Resources */,
 				BEEF45951912B094001C57AA /* Supporting Files */,
 			);
+			name = KMAccordionTableViewController;
 			path = KMAccordionTableView;
 			sourceTree = "<group>";
 		};
 		BEEF45951912B094001C57AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF45961912B094001C57AA /* KMAccordionTableView-Info.plist */,
+				BEEF45961912B094001C57AA /* KMAccordionTableViewController-Info.plist */,
 				BEEF45971912B094001C57AA /* InfoPlist.strings */,
 				BEEF459A1912B094001C57AA /* main.m */,
-				BEEF459C1912B094001C57AA /* KMAccordionTableView-Prefix.pch */,
+				BEEF459C1912B094001C57AA /* KMAccordionTableViewController-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -204,7 +205,7 @@
 		BEEF45AE1912B094001C57AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF45AF1912B094001C57AA /* KMAccordionTableViewTests-Info.plist */,
+				BEEF45AF1912B094001C57AA /* KMAccordionTableViewControllerTests-Info.plist */,
 				BEEF45B01912B094001C57AA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -222,9 +223,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BEEF458A1912B094001C57AA /* KMAccordionTableView */ = {
+		BEEF458A1912B094001C57AA /* KMAccordionTableViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEEF45B71912B094001C57AA /* Build configuration list for PBXNativeTarget "KMAccordionTableView" */;
+			buildConfigurationList = BEEF45B71912B094001C57AA /* Build configuration list for PBXNativeTarget "KMAccordionTableViewController" */;
 			buildPhases = (
 				042CF6CE4321405DA345E473 /* Check Pods Manifest.lock */,
 				BEEF45871912B094001C57AA /* Sources */,
@@ -236,14 +237,14 @@
 			);
 			dependencies = (
 			);
-			name = KMAccordionTableView;
+			name = KMAccordionTableViewController;
 			productName = KMAccordionTableView;
-			productReference = BEEF458B1912B094001C57AA /* KMAccordionTableView.app */;
+			productReference = BEEF458B1912B094001C57AA /* KMAccordionTableViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BEEF45A51912B094001C57AA /* KMAccordionTableViewTests */ = {
+		BEEF45A51912B094001C57AA /* KMAccordionTableViewControllerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEEF45BA1912B094001C57AA /* Build configuration list for PBXNativeTarget "KMAccordionTableViewTests" */;
+			buildConfigurationList = BEEF45BA1912B094001C57AA /* Build configuration list for PBXNativeTarget "KMAccordionTableViewControllerTests" */;
 			buildPhases = (
 				BEEF45A21912B094001C57AA /* Sources */,
 				BEEF45A31912B094001C57AA /* Frameworks */,
@@ -254,9 +255,9 @@
 			dependencies = (
 				BEEF45AC1912B094001C57AA /* PBXTargetDependency */,
 			);
-			name = KMAccordionTableViewTests;
+			name = KMAccordionTableViewControllerTests;
 			productName = KMAccordionTableViewTests;
-			productReference = BEEF45A61912B094001C57AA /* KMAccordionTableViewTests.xctest */;
+			productReference = BEEF45A61912B094001C57AA /* KMAccordionTableViewControllerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -272,7 +273,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BEEF45861912B094001C57AA /* Build configuration list for PBXProject "KMAccordionTableView" */;
+			buildConfigurationList = BEEF45861912B094001C57AA /* Build configuration list for PBXProject "KMAccordionTableViewController" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -284,8 +285,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEEF458A1912B094001C57AA /* KMAccordionTableView */,
-				BEEF45A51912B094001C57AA /* KMAccordionTableViewTests */,
+				BEEF458A1912B094001C57AA /* KMAccordionTableViewController */,
+				BEEF45A51912B094001C57AA /* KMAccordionTableViewControllerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -373,7 +374,7 @@
 /* Begin PBXTargetDependency section */
 		BEEF45AC1912B094001C57AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BEEF458A1912B094001C57AA /* KMAccordionTableView */;
+			target = BEEF458A1912B094001C57AA /* KMAccordionTableViewController */;
 			targetProxy = BEEF45AB1912B094001C57AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -475,9 +476,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KMAccordionTableView/KMAccordionTableView-Prefix.pch";
-				INFOPLIST_FILE = "KMAccordionTableView/KMAccordionTableView-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "KMAccordionTableView/KMAccordionTableViewController-Prefix.pch";
+				INFOPLIST_FILE = "KMAccordionTableView/KMAccordionTableViewController-Info.plist";
+				PRODUCT_NAME = KMAccordionTableViewController;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -489,9 +490,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KMAccordionTableView/KMAccordionTableView-Prefix.pch";
-				INFOPLIST_FILE = "KMAccordionTableView/KMAccordionTableView-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "KMAccordionTableView/KMAccordionTableViewController-Prefix.pch";
+				INFOPLIST_FILE = "KMAccordionTableView/KMAccordionTableViewController-Info.plist";
+				PRODUCT_NAME = KMAccordionTableViewController;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -511,8 +512,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "KMAccordionTableViewTests/KMAccordionTableViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "KMAccordionTableViewTests/KMAccordionTableViewControllerTests-Info.plist";
+				PRODUCT_NAME = KMAccordionTableViewControllerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -529,8 +530,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KMAccordionTableView/KMAccordionTableView-Prefix.pch";
-				INFOPLIST_FILE = "KMAccordionTableViewTests/KMAccordionTableViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "KMAccordionTableViewTests/KMAccordionTableViewControllerTests-Info.plist";
+				PRODUCT_NAME = KMAccordionTableViewControllerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -539,7 +540,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BEEF45861912B094001C57AA /* Build configuration list for PBXProject "KMAccordionTableView" */ = {
+		BEEF45861912B094001C57AA /* Build configuration list for PBXProject "KMAccordionTableViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEEF45B51912B094001C57AA /* Debug */,
@@ -548,7 +549,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEEF45B71912B094001C57AA /* Build configuration list for PBXNativeTarget "KMAccordionTableView" */ = {
+		BEEF45B71912B094001C57AA /* Build configuration list for PBXNativeTarget "KMAccordionTableViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEEF45B81912B094001C57AA /* Debug */,
@@ -557,7 +558,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEEF45BA1912B094001C57AA /* Build configuration list for PBXNativeTarget "KMAccordionTableViewTests" */ = {
+		BEEF45BA1912B094001C57AA /* Build configuration list for PBXNativeTarget "KMAccordionTableViewControllerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEEF45BB1912B094001C57AA /* Debug */,
