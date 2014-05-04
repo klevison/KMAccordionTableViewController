@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
   s.author           = { "Klevison Matias" => "klevison@gmail.com" }
   
   s.source           = { :git => "https://github.com/klevison/KMAccordionTableViewController.git", :tag => s.version.to_s }
-  s.source_files     = "KMAccordionTableView/Classes", "KMAccordionTableView/Classes/**/*.{h,m}"
-  s.exclude_files    = "KMAccordionTableView/ViewController/MyViewController*.{h,m}"
-  s.resources        = "KMAccordionTableView/Resources/*"
+  s.source_files     = "KMAccordionTableView/Classes" , "KMAccordionTableView/Classes/**/*"
+  s.exclude_files    = "KMAccordionTableView/Classes/ViewController/MyViewController.h" , "KMAccordionTableView/Classes/ViewController/MyViewController.m"
+  s.resources        = "KMAccordionTableView/Resources/*", "KMAccordionTableView/Classes/Header/*.{xib}"
   
   s.requires_arc     = true
   
