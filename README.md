@@ -2,6 +2,26 @@
 
 Accordion UITableViewController component based on Apples's example.
 
+## Under the Hood
+
+* Uses ARC (Automatic Reference Counting)
+* Supports device rotation
+* Supports customization
+* Supports UIViews as sections (UIViews, UIViewController's view, UITableViews, UIWebView, MKMapView, etc...)
+
+## How to install it?
+
+[CocoaPods](http://cocoapods.org) is the easiest way to install KMAccordionTableViewController. Run ```pod search KMAccordionTableViewController``` to search for the latest version. Then, copy and paste the ```pod``` line to your ```Podfile```. Your podfile should look like:
+
+```
+platform :ios, '6.0'
+pod 'KMAccordionTableViewController', '~> X.Y.Z'
+```
+
+Finally, install it by running ```pod install```.
+
+If you don't use CocoaPods, import the all files from "Classes" directory to your project.
+
 ## How to use it?
 
 ### Extends from KMAccordionTableViewController
