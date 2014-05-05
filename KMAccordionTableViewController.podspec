@@ -11,13 +11,13 @@ Pod::Spec.new do |s|
   s.author           = { "Klevison Matias" => "klevison@gmail.com" }
   
   s.source           = { :git => "https://github.com/klevison/KMAccordionTableViewController.git", :tag => s.version.to_s }
-  s.source_files     = "KMAccordionTableViewController/Classes/**/*"
+  s.source_files     = "KMAccordionTableViewController/*.{h,m}"
   s.exclude_files    = "KMAccordionTableViewController/Classes/ViewController/MyViewController*.{h,m}"
   s.resources        = "KMAccordionTableViewController/*.{xib,png,nib}"
   
   s.requires_arc     = true
   
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '7.0'
 
   s.frameworks  = 'UIKit'
 
