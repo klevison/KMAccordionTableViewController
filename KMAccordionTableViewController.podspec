@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/klevison/KMAccordionTableViewController.git", :tag => s.version.to_s }
   s.source_files     = "KMAccordionTableViewController/Classes", "KMAccordionTableViewController/Classes/**/*.{h,m}"
   s.exclude_files    = "KMAccordionTableViewController/Classes/ViewController/MyViewController*.{h,m}"
-  s.resources        = "KMAccordionTableViewController/*.{xib,png,nib}"
+  s.resources        = "KMAccordionTableViewController/**/*.{xib,png,nib}"
   
   s.requires_arc     = true
   
