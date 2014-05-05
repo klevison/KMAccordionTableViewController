@@ -103,4 +103,4 @@ If you have any questions comments or suggestions, send me a message. If you fin
 
 ## Copyright and license
 
-Code and documentation copyright 2014 Klevison Matias. Code released under [the MIT license](LICENSE).
+Copyright (c) 2014 Klevison Matias (http://twitter.com/klevison). Code released under [the MIT license](LICENSE).
