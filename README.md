@@ -1,4 +1,4 @@
-# KMAccordionTableViewController [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/NHCalendarActivity/badge.png)](http://cocoapods.org/?q=name%3AKMAccordionTableViewController%2A) [![Cocoapods](https://cocoapod-badges.herokuapp.com/p/NHCalendarActivity/badge.png)](http://cocoapods.org/?q=name%3AKMAccordionTableViewController%2A)
+# KMAccordionTableViewController
 
 Accordion UITableViewController component based on Apples's example.
 
@@ -93,6 +93,14 @@ If you don't use CocoaPods, import the all files from "Classes" directory to you
     return @[section1, section2, section3];
 }
 ```
-## And you have this resuld
 
+## Contact
 
+If you have any questions comments or suggestions, send me a message. If you find a bug, or want to submit a pull request, let me know.
+
+* klevison@gmail.com
+* http://twitter.com/klevison
+
+## Copyright and license
+
+Code and documentation copyright 2014 Klevison Matias. Code released under [the MIT license](LICENSE).
