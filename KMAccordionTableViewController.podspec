@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
   s.author           = { "Klevison Matias" => "klevison@gmail.com" }
   
   s.source           = { :git => "https://github.com/klevison/KMAccordionTableViewController.git", :tag => s.version.to_s }
-  s.source_files     = "KMAccordionTableView/Classes/**/*"
-  s.exclude_files    = "KMAccordionTableView/Classes/ViewController/MyViewController*.{h,m}"
-  s.resources        = "KMAccordionTableView/*.{xib,png,nib}"
+  s.source_files     = "KMAccordionTableViewController/Classes/**/*"
+  s.exclude_files    = "KMAccordionTableViewController/Classes/ViewController/MyViewController*.{h,m}"
+  s.resources        = "KMAccordionTableViewController/*.{xib,png,nib}"
   
   s.requires_arc     = true
   
@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
 
   s.frameworks  = 'UIKit'
 
-  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/KMAccordionTableView"' }
+  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/KMAccordionTableViewController"' }
 
 end
