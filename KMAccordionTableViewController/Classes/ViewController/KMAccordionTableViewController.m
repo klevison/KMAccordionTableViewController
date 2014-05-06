@@ -55,8 +55,8 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         KMSection *section = self.sections[indexPath.section];
         [cell.contentView addSubview:section.view];
-        [cell.contentView setFrame:section.view.frame];
         [cell.contentView setAutoresizesSubviews:NO];
+        [cell.contentView setFrame:section.view.frame];
     }
 
     return cell;
