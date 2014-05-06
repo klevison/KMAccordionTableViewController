@@ -56,6 +56,7 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
         KMSection *section = self.sections[indexPath.section];
         [cell.contentView addSubview:section.view];
         [cell.contentView setFrame:section.view.frame];
+        [cell.contentView setAutoresizesSubviews:NO];
     }
 
     return cell;
