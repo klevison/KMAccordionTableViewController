@@ -29,11 +29,14 @@
 @property(nonatomic, strong) UIColor *headerColor;
 @property(nonatomic, strong) UIColor *headerSeparatorColor;
 @property(weak, nonatomic) IBOutlet UIView *headerSeparatorView;
-@property(nonatomic, strong) UIImage *headerDisclosureButtonImage;
 @property(nonatomic) NSInteger section;
 @property (weak, nonatomic) IBOutlet UIView *backgroundHeaderView;
+@property (weak, nonatomic) IBOutlet UIView *overHeaderView;
+@property(nonatomic) UIImage *headerArrowImageOpened;
+@property(nonatomic) UIImage *headerArrowImageClosed;
 
 - (void)toggleOpenWithUserAction:(BOOL)userAction;
+- (void)addOverHeaderSubView:(UIView *)view;
 
 @end
 

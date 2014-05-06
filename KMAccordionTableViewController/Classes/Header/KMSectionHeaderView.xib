@@ -18,7 +18,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmV-0D-x5a">
                     <rect key="frame" x="272" y="0.0" width="47" height="47"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="carat.png">
+                    <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -52,6 +52,11 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wkr-Fq-D4M">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <constraints>
                 <constraint firstItem="WJA-Jn-ogR" firstAttribute="top" secondItem="Vo7-QZ-Maa" secondAttribute="bottom" id="4Qu-o0-Yme"/>
@@ -75,11 +80,9 @@
                 <outlet property="backgroundHeaderView" destination="Uju-4A-bTW" id="n6s-hd-JAo"/>
                 <outlet property="disclosureButton" destination="mmV-0D-x5a" id="9fA-4g-lpl"/>
                 <outlet property="headerSeparatorView" destination="WJA-Jn-ogR" id="qoo-HK-DDX"/>
+                <outlet property="overHeaderView" destination="Wkr-Fq-D4M" id="erI-pZ-lMs"/>
                 <outlet property="titleLabel" destination="cbG-Fq-5Ap" id="0KR-pz-tuK"/>
             </connections>
         </view>
     </objects>
-    <resources>
-        <image name="carat.png" width="11" height="11"/>
-    </resources>
 </document>

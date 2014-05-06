@@ -11,9 +11,11 @@
 @implementation KMSectionHeaderView
 
 - (void)awakeFromNib {
+    
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                  action:@selector(toggleOpen:)];
     [self addGestureRecognizer:tapGesture];
+    
 }
 
 - (IBAction)toggleOpen:(id)sender {
@@ -21,6 +23,7 @@
 }
 
 - (void)toggleOpenWithUserAction:(BOOL)userAction {
+
     self.disclosureButton.selected = !self.disclosureButton.selected;
 
     if (userAction) {
@@ -36,6 +39,10 @@
         }
     }
 
+}
+
+- (void)addOverHeaderSubView:(UIView *)view{
+    [self.overHeaderView addSubview:view];
 }
 
 - (void)setHeaderSeparatorColor:(UIColor *)headerSeparatorColor {
@@ -54,8 +61,12 @@
     self.titleLabel.textColor = headerTitleColor;
 }
 
-- (void)setHeaderDisclosureButtonImage:(UIImage *)headerDisclosureButtonImage {
-    [self.disclosureButton setImage:headerDisclosureButtonImage forState:UIControlStateSelected];
+- (void)setHeaderArrowImageOpened:(UIImage *)headerArrowImageOpened{
+    [self.disclosureButton setImage:headerArrowImageOpened forState:UIControlStateNormal];
+}
+
+- (void)setHeaderArrowImageClosed:(UIImage *)headerArrowImageClosed{
+    [self.disclosureButton setImage:headerArrowImageClosed forState:UIControlStateSelected];
 }
 
 @end

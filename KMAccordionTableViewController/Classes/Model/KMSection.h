@@ -14,6 +14,7 @@
 
 @property(getter = isOpen) BOOL open;
 @property UIView *view;
+@property UIView *overHeaderView;
 @property KMSectionHeaderView *headerView;
 @property(nonatomic, copy) NSString *title;
 

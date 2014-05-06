@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "KMSection.h"
-
+#import "KMSectionHeaderView.h"
 
 @class KMAccordionTableViewController;
 @class KMSection;
@@ -62,8 +62,13 @@
 @property(nonatomic, strong) UIColor *headerSeparatorColor;
 
 /**
- Sets section header disclosure button image.
+ Sets section header disclosure opened image.
  */
-@property(nonatomic, strong) UIImage *headerDisclosureButtonImage;
+@property(nonatomic) UIImage *headerArrowImageOpened;
+
+/**
+ Sets section header disclosure closed image.
+ */
+@property(nonatomic) UIImage *headerArrowImageClosed;
 
 @end

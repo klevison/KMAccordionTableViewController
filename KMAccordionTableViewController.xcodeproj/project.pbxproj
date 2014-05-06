@@ -1,530 +1,1285 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		BE6DEF6519180BD4008490FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6DEF6419180BD4008490FC /* Foundation.framework */; };
-		BE6DEF6719180BD4008490FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6DEF6619180BD4008490FC /* CoreGraphics.framework */; };
-		BE6DEF6919180BD4008490FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6DEF6819180BD4008490FC /* UIKit.framework */; };
-		BE6DEF6F19180BD4008490FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE6DEF6D19180BD4008490FC /* InfoPlist.strings */; };
-		BE6DEF7119180BD4008490FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6DEF7019180BD4008490FC /* main.m */; };
-		BE6DEF7519180BD5008490FC /* KMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6DEF7419180BD5008490FC /* KMAppDelegate.m */; };
-		BE6DEF7719180BD5008490FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6DEF7619180BD5008490FC /* Images.xcassets */; };
-		BE6DEF7E19180BD9008490FC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6DEF7D19180BD9008490FC /* XCTest.framework */; };
-		BE6DEF7F19180BD9008490FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6DEF6419180BD4008490FC /* Foundation.framework */; };
-		BE6DEF8019180BD9008490FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6DEF6819180BD4008490FC /* UIKit.framework */; };
-		BE6DEF8819180BD9008490FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE6DEF8619180BD9008490FC /* InfoPlist.strings */; };
-		BE6DEF8A19180BD9008490FC /* KMAccordionTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6DEF8919180BD9008490FC /* KMAccordionTableViewControllerTests.m */; };
-		BE6DEFA019180C7A008490FC /* KMSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6DEF9619180C7A008490FC /* KMSectionHeaderView.m */; };
-		BE6DEFA119180C7A008490FC /* KMSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE6DEF9719180C7A008490FC /* KMSectionHeaderView.xib */; };
-		BE6DEFA219180C7A008490FC /* KMSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6DEF9A19180C7A008490FC /* KMSection.m */; };
-		BE6DEFA319180C7A008490FC /* KMAccordionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6DEF9D19180C7A008490FC /* KMAccordionTableViewController.m */; };
-		BE6DEFA419180C7A008490FC /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6DEF9F19180C7A008490FC /* MyViewController.m */; };
-		BE6DEFA819180D2A008490FC /* carat-open.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6DEFA619180D2A008490FC /* carat-open.png */; };
-		BE6DEFA919180D2A008490FC /* carat.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6DEFA719180D2A008490FC /* carat.png */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BE6DEF8119180BD9008490FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE6DEF5919180BD3008490FC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BE6DEF6019180BD4008490FC;
-			remoteInfo = KMAccordionTableViewController;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		BE6DEF6119180BD4008490FC /* KMAccordionTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMAccordionTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE6DEF6419180BD4008490FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		BE6DEF6619180BD4008490FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BE6DEF6819180BD4008490FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		BE6DEF6C19180BD4008490FC /* KMAccordionTableViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMAccordionTableViewController-Info.plist"; sourceTree = "<group>"; };
-		BE6DEF6E19180BD4008490FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BE6DEF7019180BD4008490FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BE6DEF7219180BD4008490FC /* KMAccordionTableViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KMAccordionTableViewController-Prefix.pch"; sourceTree = "<group>"; };
-		BE6DEF7319180BD5008490FC /* KMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMAppDelegate.h; sourceTree = "<group>"; };
-		BE6DEF7419180BD5008490FC /* KMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMAppDelegate.m; sourceTree = "<group>"; };
-		BE6DEF7619180BD5008490FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BE6DEF7C19180BD9008490FC /* KMAccordionTableViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMAccordionTableViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE6DEF7D19180BD9008490FC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		BE6DEF8519180BD9008490FC /* KMAccordionTableViewControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMAccordionTableViewControllerTests-Info.plist"; sourceTree = "<group>"; };
-		BE6DEF8719180BD9008490FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BE6DEF8919180BD9008490FC /* KMAccordionTableViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewControllerTests.m; sourceTree = "<group>"; };
-		BE6DEF9519180C7A008490FC /* KMSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSectionHeaderView.h; sourceTree = "<group>"; };
-		BE6DEF9619180C7A008490FC /* KMSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSectionHeaderView.m; sourceTree = "<group>"; };
-		BE6DEF9719180C7A008490FC /* KMSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KMSectionHeaderView.xib; sourceTree = "<group>"; };
-		BE6DEF9919180C7A008490FC /* KMSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSection.h; sourceTree = "<group>"; };
-		BE6DEF9A19180C7A008490FC /* KMSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSection.m; sourceTree = "<group>"; };
-		BE6DEF9C19180C7A008490FC /* KMAccordionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMAccordionTableViewController.h; sourceTree = "<group>"; };
-		BE6DEF9D19180C7A008490FC /* KMAccordionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewController.m; sourceTree = "<group>"; };
-		BE6DEF9E19180C7A008490FC /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		BE6DEF9F19180C7A008490FC /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		BE6DEFA619180D2A008490FC /* carat-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carat-open.png"; sourceTree = "<group>"; };
-		BE6DEFA719180D2A008490FC /* carat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carat.png; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		BE6DEF5E19180BD4008490FC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE6DEF6719180BD4008490FC /* CoreGraphics.framework in Frameworks */,
-				BE6DEF6919180BD4008490FC /* UIKit.framework in Frameworks */,
-				BE6DEF6519180BD4008490FC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE6DEF7919180BD9008490FC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE6DEF7E19180BD9008490FC /* XCTest.framework in Frameworks */,
-				BE6DEF8019180BD9008490FC /* UIKit.framework in Frameworks */,
-				BE6DEF7F19180BD9008490FC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		BE6DEF5819180BD3008490FC = {
-			isa = PBXGroup;
-			children = (
-				BE6DEF6A19180BD4008490FC /* KMAccordionTableViewController */,
-				BE6DEF8319180BD9008490FC /* KMAccordionTableViewControllerTests */,
-				BE6DEF6319180BD4008490FC /* Frameworks */,
-				BE6DEF6219180BD4008490FC /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		BE6DEF6219180BD4008490FC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DEF6119180BD4008490FC /* KMAccordionTableViewController.app */,
-				BE6DEF7C19180BD9008490FC /* KMAccordionTableViewControllerTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BE6DEF6319180BD4008490FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DEF6419180BD4008490FC /* Foundation.framework */,
-				BE6DEF6619180BD4008490FC /* CoreGraphics.framework */,
-				BE6DEF6819180BD4008490FC /* UIKit.framework */,
-				BE6DEF7D19180BD9008490FC /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BE6DEF6A19180BD4008490FC /* KMAccordionTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DEF9319180C7A008490FC /* Classes */,
-				BE6DEF7319180BD5008490FC /* KMAppDelegate.h */,
-				BE6DEF7419180BD5008490FC /* KMAppDelegate.m */,
-				BE6DEF7619180BD5008490FC /* Images.xcassets */,
-				BE6DEFA519180D2A008490FC /* Resources */,
-				BE6DEF6B19180BD4008490FC /* Supporting Files */,
-			);
-			path = KMAccordionTableViewController;
-			sourceTree = "<group>";
-		};
-		BE6DEF6B19180BD4008490FC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DEF6C19180BD4008490FC /* KMAccordionTableViewController-Info.plist */,
-				BE6DEF6D19180BD4008490FC /* InfoPlist.strings */,
-				BE6DEF7019180BD4008490FC /* main.m */,
-				BE6DEF7219180BD4008490FC /* KMAccordionTableViewController-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BE6DEF8319180BD9008490FC /* KMAccordionTableViewControllerTests */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DEF8919180BD9008490FC /* KMAccordionTableViewControllerTests.m */,
-				BE6DEF8419180BD9008490FC /* Supporting Files */,
-			);
-			path = KMAccordionTableViewControllerTests;
-			sourceTree = "<group>";
-		};
-		BE6DEF8419180BD9008490FC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DEF8519180BD9008490FC /* KMAccordionTableViewControllerTests-Info.plist */,
-				BE6DEF8619180BD9008490FC /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BE6DEF9319180C7A008490FC /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DEF9419180C7A008490FC /* Header */,
-				BE6DEF9819180C7A008490FC /* Model */,
-				BE6DEF9B19180C7A008490FC /* ViewController */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		BE6DEF9419180C7A008490FC /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DEF9519180C7A008490FC /* KMSectionHeaderView.h */,
-				BE6DEF9619180C7A008490FC /* KMSectionHeaderView.m */,
-				BE6DEF9719180C7A008490FC /* KMSectionHeaderView.xib */,
-			);
-			path = Header;
-			sourceTree = "<group>";
-		};
-		BE6DEF9819180C7A008490FC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DEF9919180C7A008490FC /* KMSection.h */,
-				BE6DEF9A19180C7A008490FC /* KMSection.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BE6DEF9B19180C7A008490FC /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DEF9C19180C7A008490FC /* KMAccordionTableViewController.h */,
-				BE6DEF9D19180C7A008490FC /* KMAccordionTableViewController.m */,
-				BE6DEF9E19180C7A008490FC /* MyViewController.h */,
-				BE6DEF9F19180C7A008490FC /* MyViewController.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		BE6DEFA519180D2A008490FC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BE6DEFA619180D2A008490FC /* carat-open.png */,
-				BE6DEFA719180D2A008490FC /* carat.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		BE6DEF6019180BD4008490FC /* KMAccordionTableViewController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BE6DEF8D19180BD9008490FC /* Build configuration list for PBXNativeTarget "KMAccordionTableViewController" */;
-			buildPhases = (
-				BE6DEF5D19180BD4008490FC /* Sources */,
-				BE6DEF5E19180BD4008490FC /* Frameworks */,
-				BE6DEF5F19180BD4008490FC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = KMAccordionTableViewController;
-			productName = KMAccordionTableViewController;
-			productReference = BE6DEF6119180BD4008490FC /* KMAccordionTableViewController.app */;
-			productType = "com.apple.product-type.application";
-		};
-		BE6DEF7B19180BD9008490FC /* KMAccordionTableViewControllerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BE6DEF9019180BD9008490FC /* Build configuration list for PBXNativeTarget "KMAccordionTableViewControllerTests" */;
-			buildPhases = (
-				BE6DEF7819180BD9008490FC /* Sources */,
-				BE6DEF7919180BD9008490FC /* Frameworks */,
-				BE6DEF7A19180BD9008490FC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BE6DEF8219180BD9008490FC /* PBXTargetDependency */,
-			);
-			name = KMAccordionTableViewControllerTests;
-			productName = KMAccordionTableViewControllerTests;
-			productReference = BE6DEF7C19180BD9008490FC /* KMAccordionTableViewControllerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		BE6DEF5919180BD3008490FC /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = KM;
-				LastUpgradeCheck = 0510;
-				TargetAttributes = {
-					BE6DEF7B19180BD9008490FC = {
-						TestTargetID = BE6DEF6019180BD4008490FC;
-					};
-				};
-			};
-			buildConfigurationList = BE6DEF5C19180BD3008490FC /* Build configuration list for PBXProject "KMAccordionTableViewController" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = BE6DEF5819180BD3008490FC;
-			productRefGroup = BE6DEF6219180BD4008490FC /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				BE6DEF6019180BD4008490FC /* KMAccordionTableViewController */,
-				BE6DEF7B19180BD9008490FC /* KMAccordionTableViewControllerTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		BE6DEF5F19180BD4008490FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE6DEFA119180C7A008490FC /* KMSectionHeaderView.xib in Resources */,
-				BE6DEF6F19180BD4008490FC /* InfoPlist.strings in Resources */,
-				BE6DEF7719180BD5008490FC /* Images.xcassets in Resources */,
-				BE6DEFA819180D2A008490FC /* carat-open.png in Resources */,
-				BE6DEFA919180D2A008490FC /* carat.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE6DEF7A19180BD9008490FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE6DEF8819180BD9008490FC /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		BE6DEF5D19180BD4008490FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE6DEFA419180C7A008490FC /* MyViewController.m in Sources */,
-				BE6DEF7519180BD5008490FC /* KMAppDelegate.m in Sources */,
-				BE6DEFA019180C7A008490FC /* KMSectionHeaderView.m in Sources */,
-				BE6DEF7119180BD4008490FC /* main.m in Sources */,
-				BE6DEFA219180C7A008490FC /* KMSection.m in Sources */,
-				BE6DEFA319180C7A008490FC /* KMAccordionTableViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE6DEF7819180BD9008490FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE6DEF8A19180BD9008490FC /* KMAccordionTableViewControllerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BE6DEF8219180BD9008490FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BE6DEF6019180BD4008490FC /* KMAccordionTableViewController */;
-			targetProxy = BE6DEF8119180BD9008490FC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BE6DEF6D19180BD4008490FC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE6DEF6E19180BD4008490FC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		BE6DEF8619180BD9008490FC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE6DEF8719180BD9008490FC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		BE6DEF8B19180BD9008490FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		BE6DEF8C19180BD9008490FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BE6DEF8E19180BD9008490FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KMAccordionTableViewController/KMAccordionTableViewController-Prefix.pch";
-				INFOPLIST_FILE = "KMAccordionTableViewController/KMAccordionTableViewController-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		BE6DEF8F19180BD9008490FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KMAccordionTableViewController/KMAccordionTableViewController-Prefix.pch";
-				INFOPLIST_FILE = "KMAccordionTableViewController/KMAccordionTableViewController-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		BE6DEF9119180BD9008490FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KMAccordionTableViewController.app/KMAccordionTableViewController";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KMAccordionTableViewController/KMAccordionTableViewController-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "KMAccordionTableViewControllerTests/KMAccordionTableViewControllerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		BE6DEF9219180BD9008490FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KMAccordionTableViewController.app/KMAccordionTableViewController";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KMAccordionTableViewController/KMAccordionTableViewController-Prefix.pch";
-				INFOPLIST_FILE = "KMAccordionTableViewControllerTests/KMAccordionTableViewControllerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		BE6DEF5C19180BD3008490FC /* Build configuration list for PBXProject "KMAccordionTableViewController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE6DEF8B19180BD9008490FC /* Debug */,
-				BE6DEF8C19180BD9008490FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BE6DEF8D19180BD9008490FC /* Build configuration list for PBXNativeTarget "KMAccordionTableViewController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE6DEF8E19180BD9008490FC /* Debug */,
-				BE6DEF8F19180BD9008490FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BE6DEF9019180BD9008490FC /* Build configuration list for PBXNativeTarget "KMAccordionTableViewControllerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE6DEF9119180BD9008490FC /* Debug */,
-				BE6DEF9219180BD9008490FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = BE6DEF5919180BD3008490FC /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>10AB0B55E13F454F98CCA404</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>38CD84FE5C9546799E339B87</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>58A2F813C2DB48A6ACECC1AD</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>7140F31EFEDB44F5927FE2FF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>58A2F813C2DB48A6ACECC1AD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF5819180BD3008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF6A19180BD4008490FC</string>
+				<string>BE6DEF8319180BD9008490FC</string>
+				<string>BE6DEF6319180BD4008490FC</string>
+				<string>BE6DEF6219180BD4008490FC</string>
+				<string>38CD84FE5C9546799E339B87</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF5919180BD3008490FC</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>KM</string>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>BE6DEF7B19180BD9008490FC</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>BE6DEF6019180BD4008490FC</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>BE6DEF5C19180BD3008490FC</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>BE6DEF5819180BD3008490FC</string>
+			<key>productRefGroup</key>
+			<string>BE6DEF6219180BD4008490FC</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>BE6DEF6019180BD4008490FC</string>
+				<string>BE6DEF7B19180BD9008490FC</string>
+			</array>
+		</dict>
+		<key>BE6DEF5C19180BD3008490FC</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>BE6DEF8B19180BD9008490FC</string>
+				<string>BE6DEF8C19180BD9008490FC</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>BE6DEF5D19180BD4008490FC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BE6DEFA419180C7A008490FC</string>
+				<string>BE6DEF7519180BD5008490FC</string>
+				<string>BE6DEFA019180C7A008490FC</string>
+				<string>BE6DEF7119180BD4008490FC</string>
+				<string>BE6DEFA219180C7A008490FC</string>
+				<string>BE6DEFA319180C7A008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>BE6DEF5E19180BD4008490FC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BE6DEF6719180BD4008490FC</string>
+				<string>BE6DEF6919180BD4008490FC</string>
+				<string>BE6DEF6519180BD4008490FC</string>
+				<string>7140F31EFEDB44F5927FE2FF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>BE6DEF5F19180BD4008490FC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BE6DEFA119180C7A008490FC</string>
+				<string>BE6DEF6F19180BD4008490FC</string>
+				<string>BE6DEF7719180BD5008490FC</string>
+				<string>BE6DEFA819180D2A008490FC</string>
+				<string>BE6DEFA919180D2A008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>BE6DEF6019180BD4008490FC</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>BE6DEF8D19180BD9008490FC</string>
+			<key>buildPhases</key>
+			<array>
+				<string>E7099655EADC44B9A90A4D4E</string>
+				<string>BE6DEF5D19180BD4008490FC</string>
+				<string>BE6DEF5E19180BD4008490FC</string>
+				<string>BE6DEF5F19180BD4008490FC</string>
+				<string>10AB0B55E13F454F98CCA404</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>KMAccordionTableViewController</string>
+			<key>productName</key>
+			<string>KMAccordionTableViewController</string>
+			<key>productReference</key>
+			<string>BE6DEF6119180BD4008490FC</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>BE6DEF6119180BD4008490FC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>KMAccordionTableViewController.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>BE6DEF6219180BD4008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF6119180BD4008490FC</string>
+				<string>BE6DEF7C19180BD9008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF6319180BD4008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF6419180BD4008490FC</string>
+				<string>BE6DEF6619180BD4008490FC</string>
+				<string>BE6DEF6819180BD4008490FC</string>
+				<string>BE6DEF7D19180BD9008490FC</string>
+				<string>58A2F813C2DB48A6ACECC1AD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF6419180BD4008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>BE6DEF6519180BD4008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF6419180BD4008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF6619180BD4008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>BE6DEF6719180BD4008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF6619180BD4008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF6819180BD4008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>BE6DEF6919180BD4008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF6819180BD4008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF6A19180BD4008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF9319180C7A008490FC</string>
+				<string>BE6DEF7319180BD5008490FC</string>
+				<string>BE6DEF7419180BD5008490FC</string>
+				<string>BE6DEF7619180BD5008490FC</string>
+				<string>BE6DEFA519180D2A008490FC</string>
+				<string>BE6DEF6B19180BD4008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>KMAccordionTableViewController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF6B19180BD4008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF6C19180BD4008490FC</string>
+				<string>BE6DEF6D19180BD4008490FC</string>
+				<string>BE6DEF7019180BD4008490FC</string>
+				<string>BE6DEF7219180BD4008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF6C19180BD4008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>KMAccordionTableViewController-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF6D19180BD4008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF6E19180BD4008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF6E19180BD4008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF6F19180BD4008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF6D19180BD4008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF7019180BD4008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF7119180BD4008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF7019180BD4008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF7219180BD4008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>KMAccordionTableViewController-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF7319180BD5008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>KMAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF7419180BD5008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>KMAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF7519180BD5008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF7419180BD5008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF7619180BD5008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF7719180BD5008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF7619180BD5008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF7819180BD9008490FC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BE6DEF8A19180BD9008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>BE6DEF7919180BD9008490FC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BE6DEF7E19180BD9008490FC</string>
+				<string>BE6DEF8019180BD9008490FC</string>
+				<string>BE6DEF7F19180BD9008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>BE6DEF7A19180BD9008490FC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BE6DEF8819180BD9008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>BE6DEF7B19180BD9008490FC</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>BE6DEF9019180BD9008490FC</string>
+			<key>buildPhases</key>
+			<array>
+				<string>BE6DEF7819180BD9008490FC</string>
+				<string>BE6DEF7919180BD9008490FC</string>
+				<string>BE6DEF7A19180BD9008490FC</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>BE6DEF8219180BD9008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>KMAccordionTableViewControllerTests</string>
+			<key>productName</key>
+			<string>KMAccordionTableViewControllerTests</string>
+			<key>productReference</key>
+			<string>BE6DEF7C19180BD9008490FC</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>BE6DEF7C19180BD9008490FC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>KMAccordionTableViewControllerTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>BE6DEF7D19180BD9008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>BE6DEF7E19180BD9008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF7D19180BD9008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF7F19180BD9008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF6419180BD4008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF8019180BD9008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF6819180BD4008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF8119180BD9008490FC</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>BE6DEF5919180BD3008490FC</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>BE6DEF6019180BD4008490FC</string>
+			<key>remoteInfo</key>
+			<string>KMAccordionTableViewController</string>
+		</dict>
+		<key>BE6DEF8219180BD9008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>BE6DEF6019180BD4008490FC</string>
+			<key>targetProxy</key>
+			<string>BE6DEF8119180BD9008490FC</string>
+		</dict>
+		<key>BE6DEF8319180BD9008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF8919180BD9008490FC</string>
+				<string>BE6DEF8419180BD9008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>KMAccordionTableViewControllerTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF8419180BD9008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF8519180BD9008490FC</string>
+				<string>BE6DEF8619180BD9008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF8519180BD9008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>KMAccordionTableViewControllerTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF8619180BD9008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF8719180BD9008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF8719180BD9008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF8819180BD9008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF8619180BD9008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF8919180BD9008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>KMAccordionTableViewControllerTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF8A19180BD9008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF8919180BD9008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEF8B19180BD9008490FC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>BE6DEF8C19180BD9008490FC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>BE6DEF8D19180BD9008490FC</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>BE6DEF8E19180BD9008490FC</string>
+				<string>BE6DEF8F19180BD9008490FC</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>BE6DEF8E19180BD9008490FC</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>38CD84FE5C9546799E339B87</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>KMAccordionTableViewController/KMAccordionTableViewController-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>KMAccordionTableViewController/KMAccordionTableViewController-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>BE6DEF8F19180BD9008490FC</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>38CD84FE5C9546799E339B87</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>KMAccordionTableViewController/KMAccordionTableViewController-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>KMAccordionTableViewController/KMAccordionTableViewController-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>BE6DEF9019180BD9008490FC</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>BE6DEF9119180BD9008490FC</string>
+				<string>BE6DEF9219180BD9008490FC</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>BE6DEF9119180BD9008490FC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/KMAccordionTableViewController.app/KMAccordionTableViewController</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>KMAccordionTableViewController/KMAccordionTableViewController-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>KMAccordionTableViewControllerTests/KMAccordionTableViewControllerTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>BE6DEF9219180BD9008490FC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/KMAccordionTableViewController.app/KMAccordionTableViewController</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>KMAccordionTableViewController/KMAccordionTableViewController-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>KMAccordionTableViewControllerTests/KMAccordionTableViewControllerTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>BE6DEF9319180C7A008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF9419180C7A008490FC</string>
+				<string>BE6DEF9819180C7A008490FC</string>
+				<string>BE6DEF9B19180C7A008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9419180C7A008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF9519180C7A008490FC</string>
+				<string>BE6DEF9619180C7A008490FC</string>
+				<string>BE6DEF9719180C7A008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Header</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9519180C7A008490FC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>KMSectionHeaderView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9619180C7A008490FC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>KMSectionHeaderView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9719180C7A008490FC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>KMSectionHeaderView.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9819180C7A008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF9919180C7A008490FC</string>
+				<string>BE6DEF9A19180C7A008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Model</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9919180C7A008490FC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>KMSection.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9A19180C7A008490FC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>KMSection.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9B19180C7A008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEF9C19180C7A008490FC</string>
+				<string>BE6DEF9D19180C7A008490FC</string>
+				<string>BE6DEF9E19180C7A008490FC</string>
+				<string>BE6DEF9F19180C7A008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>ViewController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9C19180C7A008490FC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>KMAccordionTableViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9D19180C7A008490FC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>KMAccordionTableViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9E19180C7A008490FC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MyViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEF9F19180C7A008490FC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MyViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEFA019180C7A008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF9619180C7A008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEFA119180C7A008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF9719180C7A008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEFA219180C7A008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF9A19180C7A008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEFA319180C7A008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF9D19180C7A008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEFA419180C7A008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEF9F19180C7A008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEFA519180D2A008490FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BE6DEFA619180D2A008490FC</string>
+				<string>BE6DEFA719180D2A008490FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEFA619180D2A008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>carat-open.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEFA719180D2A008490FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>carat.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE6DEFA819180D2A008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEFA619180D2A008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE6DEFA919180D2A008490FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE6DEFA719180D2A008490FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7099655EADC44B9A90A4D4E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>BE6DEF5919180BD3008490FC</string>
+</dict>
+</plist>

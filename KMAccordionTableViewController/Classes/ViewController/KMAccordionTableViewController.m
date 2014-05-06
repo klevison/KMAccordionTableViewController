@@ -7,7 +7,6 @@
 //
 
 #import "KMAccordionTableViewController.h"
-#import "KMSectionHeaderView.h"
 
 @interface KMAccordionTableViewController () <KMSectionHeaderViewDelegate>
 
@@ -82,11 +81,16 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
     sectionHeaderView.titleLabel.text = currentSection.title;
     [sectionHeaderView setSection:section];
     [sectionHeaderView setDelegate:self];
-    [sectionHeaderView setHeaderDisclosureButtonImage:self.headerDisclosureButtonImage];
+    [sectionHeaderView setHeaderArrowImageOpened:self.headerArrowImageOpened];
+    [sectionHeaderView setHeaderArrowImageClosed:self.headerArrowImageClosed];
     [sectionHeaderView setHeaderFont:self.headerFont];
     [sectionHeaderView setHeaderTitleColor:self.headerTitleColor];
     [sectionHeaderView setHeaderSeparatorColor:self.headerSeparatorColor];
     [sectionHeaderView setHeaderColor:self.headerColor];
+    
+    if (currentSection.overHeaderView) {
+        [sectionHeaderView addOverHeaderSubView:currentSection.overHeaderView];
+    }
 
     return sectionHeaderView;
 }
@@ -127,6 +131,9 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
     [self.tableView insertRowsAtIndexPaths:indexPathsToInsert withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView endUpdates];
+    
+    CGRect sectionRect = [self.tableView rectForSection:sectionOpened];
+    [self.tableView scrollRectToVisible:sectionRect animated:YES];
 
     self.openSectionIndex = sectionOpened;
 }
