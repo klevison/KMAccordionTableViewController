@@ -75,6 +75,16 @@ If you don't use CocoaPods, import the all files from "Classes" directory to you
 
 }
 
+- (void)setupAppearence {
+    [self setHeaderHeight:38];
+    [self setHeaderArrowImageClosed:[UIImage imageNamed:@"carat-open"]];
+    [self setHeaderArrowImageOpened:[UIImage imageNamed:@"carat"]];
+    [self setHeaderFont:[UIFont fontWithName:@"HelveticaNeue" size:15]];
+    [self setHeaderTitleColor:[UIColor greenColor]];
+    [self setHeaderSeparatorColor:[UIColor colorWithRed:0.157 green:0.157 blue:0.157 alpha:1]];
+    [self setHeaderColor:[UIColor colorWithRed:0.114 green:0.114 blue:0.114 alpha:1]];
+}
+
 - (NSArray *)getSectionArray {
     UIView *viewOfSection1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
     viewOfSection1.backgroundColor = [UIColor grayColor];
