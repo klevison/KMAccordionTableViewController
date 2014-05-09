@@ -9,7 +9,6 @@ Accordion UITableViewController component based on Apples's example.
 ## Under the Hood
 
 * Uses ARC (Automatic Reference Counting)
-* Supports device rotation
 * Supports customization
 * Supports UIViews as sections (UIViews, UIViewController's view, UITableViews, UIWebView, MKMapView, etc...)
 
@@ -19,7 +18,7 @@ Accordion UITableViewController component based on Apples's example.
 
 ```
 platform :ios, '6.0'
-pod 'KMAccordionTableViewController', '~> X.Y.Z'
+pod 'KMAccordionTableViewController'
 ```
 
 Finally, install it by running ```pod install```.
