@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KMSection.h"
 
 @class KMSectionHeaderView;
 
@@ -29,7 +30,7 @@
 @property(nonatomic, strong) UIColor *headerColor;
 @property(nonatomic, strong) UIColor *headerSeparatorColor;
 @property(weak, nonatomic) IBOutlet UIView *headerSeparatorView;
-@property(nonatomic) NSInteger section;
+@property(nonatomic) KMSection *section;
 @property (weak, nonatomic) IBOutlet UIView *backgroundHeaderView;
 @property (weak, nonatomic) IBOutlet UIView *overHeaderView;
 @property(nonatomic) UIImage *headerArrowImageOpened;

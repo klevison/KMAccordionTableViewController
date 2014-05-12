@@ -17,5 +17,6 @@
 @property UIView *overHeaderView;
 @property KMSectionHeaderView *headerView;
 @property(nonatomic, copy) NSString *title;
+@property int sectionIndex;
 
 @end

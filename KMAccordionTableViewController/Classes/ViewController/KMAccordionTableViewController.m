@@ -46,6 +46,12 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
     return currentSection.open ? 1 : 0;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat heightForRowAtIndexPath = [self.dataSource accordionTableView:self heightForSectionAtIndex:indexPath.section];
+    return heightForRowAtIndexPath;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *CellIdentifier = [NSString stringWithFormat:@"CellIdentifier%d", indexPath.section];
 
@@ -76,11 +82,12 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
     KMSectionHeaderView *sectionHeaderView = (KMSectionHeaderView*)[self.tableView dequeueReusableHeaderFooterViewWithIdentifier:SectionHeaderViewIdentifier];
 
     KMSection *currentSection = [self.dataSource accordionTableView:self sectionForRowAtIndex:section];
+    currentSection.sectionIndex = section;
 
     currentSection.headerView = sectionHeaderView;
     
     sectionHeaderView.titleLabel.text = currentSection.title;
-    [sectionHeaderView setSection:section];
+    [sectionHeaderView setSection:currentSection];
     [sectionHeaderView setDelegate:self];
     [sectionHeaderView setHeaderArrowImageOpened:self.headerArrowImageOpened];
     [sectionHeaderView setHeaderArrowImageClosed:self.headerArrowImageClosed];
@@ -94,11 +101,6 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
     }
 
     return sectionHeaderView;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    KMSection *section = (self.sections)[indexPath.section];
-    return section.view.frame.size.height;
 }
 
 #pragma mark - SectionHeaderViewDelegate

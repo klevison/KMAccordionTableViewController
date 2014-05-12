@@ -22,6 +22,10 @@
     return self.sections[index];
 }
 
+- (CGFloat)accordionTableView:(KMAccordionTableViewController *)accordionTableView heightForSectionAtIndex:(NSInteger)index{    KMSection *section = self.sections[index];
+    return section.view.frame.size.height;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -40,6 +44,14 @@
     [self setHeaderTitleColor:[UIColor greenColor]];
     [self setHeaderSeparatorColor:[UIColor colorWithRed:0.157 green:0.157 blue:0.157 alpha:1]];
     [self setHeaderColor:[UIColor colorWithRed:0.114 green:0.114 blue:0.114 alpha:1]];
+}
+
+- (void) teste{
+    KMSection *section = self.sections[2];
+    
+    UIView *view = section.view;
+    view.frame = CGRectMake(0, 0, 320, 400);
+    [self.tableView reloadData];
 }
 
 - (NSArray *)getSectionArray {
@@ -61,6 +73,12 @@
 
     UIView *viewOfSection3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
     viewOfSection3.backgroundColor = [UIColor greenColor];
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    [button setTitle:@"click meeeeeee" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(teste) forControlEvents:UIControlEventTouchUpInside];
+    [viewOfSection3 addSubview:button];
+    
     KMSection *section3 = [[KMSection alloc] init];
     section3.view = viewOfSection3;
     section3.title = @"thirddddd";
@@ -74,10 +92,10 @@
     UIView *viewOfSection6 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 700)];
     viewOfSection6.backgroundColor = [UIColor greenColor];
     KMSection *section6 = [[KMSection alloc] init];
-    section6.view = viewOfSection3;
+    section6.view = viewOfSection6;
     section6.title = @"thirddddd";
 
-    return @[section1, section2, section3,section5,section6];
+    return @[section1, section2, section3, section5,section6];
 }
 
 @end

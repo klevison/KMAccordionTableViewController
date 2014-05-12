@@ -25,16 +25,15 @@
 - (void)toggleOpenWithUserAction:(BOOL)userAction {
 
     self.disclosureButton.selected = !self.disclosureButton.selected;
-
+    self.section.open = !self.section.open;
     if (userAction) {
-        if (self.disclosureButton.selected) {
+        if (self.section.open) {
             if ([self.delegate respondsToSelector:@selector(sectionHeaderView:sectionOpened:)]) {
-                [self.delegate sectionHeaderView:self sectionOpened:self.section];
+                [self.delegate sectionHeaderView:self sectionOpened:self.section.sectionIndex];
             }
-        }
-        else {
+        }else {
             if ([self.delegate respondsToSelector:@selector(sectionHeaderView:sectionClosed:)]) {
-                [self.delegate sectionHeaderView:self sectionClosed:self.section];
+                [self.delegate sectionHeaderView:self sectionClosed:self.section.sectionIndex];
             }
         }
     }
