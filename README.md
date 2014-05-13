@@ -50,7 +50,6 @@ If you don't use CocoaPods, import the all files from "Classes" directory to you
 ### Customization
 
 ```objc
-@property(nonatomic, strong) NSArray *sections; //Sets section's view.
 @property(nonatomic, assign) NSInteger headerHeight; //Sets section header height.
 @property(nonatomic, strong) UIFont *headerFont; //Sets section header font.
 @property(nonatomic, strong) UIColor *headerTitleColor; //Sets section header font color.
@@ -79,14 +78,16 @@ If you don't use CocoaPods, import the all files from "Classes" directory to you
     return self.sections[index];
 }
 
+- (CGFloat)accordionTableView:(KMAccordionTableViewController *)accordionTableView heightForSectionAtIndex:(NSInteger)index{
+    KMSection *section = self.sections[index];
+    return section.frame.size.height;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.dataSource = self;
-
     self.sections = [self getSectionArray];
     [self setupAppearence];
-
 }
 
 - (void)setupAppearence {
