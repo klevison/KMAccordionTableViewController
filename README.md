@@ -39,15 +39,30 @@ If you don't use CocoaPods, import the all files from "Classes" directory to you
 
 ### Implement KMAccordionTableViewControllerDataSource
 
-```objective-c
+```objc
 - (NSInteger)numberOfSectionsInAccordionTableViewController:(KMAccordionTableViewController *)accordionTableView;
 
 - (KMSection *)accordionTableView:(KMAccordionTableViewController *)accordionTableView sectionForRowAtIndex:(NSInteger)index;
+
+- (CGFloat)accordionTableView:(KMAccordionTableViewController *)accordionTableView heightForSectionAtIndex:(NSInteger)index;
+```
+
+### Customization
+
+```objc
+@property(nonatomic, strong) NSArray *sections; //Sets section's view.
+@property(nonatomic, assign) NSInteger headerHeight; //Sets section header height.
+@property(nonatomic, strong) UIFont *headerFont; //Sets section header font.
+@property(nonatomic, strong) UIColor *headerTitleColor; //Sets section header font color.
+@property(nonatomic, strong) UIColor *headerColor; //Sets section header background color.
+@property(nonatomic, strong) UIColor *headerSeparatorColor; //Sets section header separator color.
+@property(nonatomic) UIImage *headerArrowImageOpened; //Sets section header disclosure opened image.
+@property(nonatomic) UIImage *headerArrowImageClosed; //Sets section header disclosure closed image.
 ```
 
 ### Example
 
-```objective-c
+```objc
 #import "MyViewController.h"
 
 @interface MyViewController () <KMAccordionTableViewControllerDataSource>
