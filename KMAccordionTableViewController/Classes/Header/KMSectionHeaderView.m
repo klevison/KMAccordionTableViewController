@@ -18,6 +18,14 @@
     
 }
 
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    
+    [self.overHeaderView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
+
 - (IBAction)toggleOpen:(id)sender {
     [self toggleOpenWithUserAction:YES];
 }
