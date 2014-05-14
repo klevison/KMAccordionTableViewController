@@ -20,9 +20,7 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.openSectionIndex = NSNotFound;
-
     [self setupTableView];
 }
 
@@ -54,9 +52,9 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *CellIdentifier = [NSString stringWithFormat:@"CellIdentifier%d", indexPath.section];
-
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
+    
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         KMSection *section = self.sections[indexPath.section];
@@ -64,7 +62,7 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
         [cell.contentView setAutoresizesSubviews:NO];
         [cell.contentView setFrame:section.view.frame];
     }
-
+    
     return cell;
 }
 
@@ -80,14 +78,14 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     KMSectionHeaderView *sectionHeaderView = (KMSectionHeaderView*)[self.tableView dequeueReusableHeaderFooterViewWithIdentifier:SectionHeaderViewIdentifier];
-
+    
     KMSection *currentSection = [self.dataSource accordionTableView:self sectionForRowAtIndex:section];
     currentSection.sectionIndex = section;
-
+    
     currentSection.headerView = sectionHeaderView;
     
     sectionHeaderView.titleLabel.text = currentSection.title;
-    [sectionHeaderView setSection:currentSection];
+    [sectionHeaderView setSection:section];
     [sectionHeaderView setDelegate:self];
     [sectionHeaderView setHeaderArrowImageOpened:self.headerArrowImageOpened];
     [sectionHeaderView setHeaderArrowImageClosed:self.headerArrowImageClosed];
@@ -95,41 +93,35 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
     [sectionHeaderView setHeaderTitleColor:self.headerTitleColor];
     [sectionHeaderView setHeaderSeparatorColor:self.headerSeparatorColor];
     [sectionHeaderView setHeaderColor:self.headerColor];
-    
     if (currentSection.overHeaderView) {
         [sectionHeaderView addOverHeaderSubView:currentSection.overHeaderView];
     }
-
+    
     return sectionHeaderView;
 }
 
 #pragma mark - SectionHeaderViewDelegate
 
 - (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView sectionOpened:(NSInteger)sectionOpened {
+    
     KMSection *section = (self.sections)[sectionOpened];
-
+    
     section.open = YES;
-
-    NSInteger countOfRowsToInsert = 1;
+    
     NSMutableArray *indexPathsToInsert = [[NSMutableArray alloc] init];
-    for (NSInteger i = 0; i < countOfRowsToInsert; i++) {
-        [indexPathsToInsert addObject:[NSIndexPath indexPathForRow:i inSection:sectionOpened]];
-    }
-
+    [indexPathsToInsert addObject:[NSIndexPath indexPathForRow:0 inSection:sectionOpened]];
+    
     NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
-
+    
     NSInteger previousOpenSectionIndex = self.openSectionIndex;
+    
     if (previousOpenSectionIndex != NSNotFound) {
-
         KMSection *previousOpenSection = (self.sections)[previousOpenSectionIndex];
         previousOpenSection.open = NO;
         [previousOpenSection.headerView toggleOpenWithUserAction:NO];
-        NSInteger countOfRowsToDelete = 1;
-        for (NSInteger i = 0; i < countOfRowsToDelete; i++) {
-            [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:i inSection:previousOpenSectionIndex]];
-        }
+        [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:0 inSection:previousOpenSectionIndex]];
     }
-
+    
     [self.tableView beginUpdates];
     [self.tableView insertRowsAtIndexPaths:indexPathsToInsert withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:UITableViewRowAnimationFade];
@@ -137,24 +129,25 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
     
     CGRect sectionRect = [self.tableView rectForSection:sectionOpened];
     [self.tableView scrollRectToVisible:sectionRect animated:YES];
-
+    
     self.openSectionIndex = sectionOpened;
+    
 }
 
 - (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView sectionClosed:(NSInteger)sectionClosed {
+    
     KMSection *currentSection = (self.sections)[sectionClosed];
-
+    
     currentSection.open = NO;
     NSInteger countOfRowsToDelete = [self.tableView numberOfRowsInSection:sectionClosed];
-
+    
     if (countOfRowsToDelete > 0) {
         NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
-        for (NSInteger i = 0; i < countOfRowsToDelete; i++) {
-            [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:i inSection:sectionClosed]];
-        }
+        [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:0 inSection:sectionClosed]];
         [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:UITableViewRowAnimationFade];
     }
     self.openSectionIndex = NSNotFound;
+    
 }
 
 @end

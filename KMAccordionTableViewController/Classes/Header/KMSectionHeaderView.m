@@ -18,34 +18,33 @@
     
 }
 
-- (void)prepareForReuse
-{
-    [super prepareForReuse];
-    
-    [self.overHeaderView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-}
-
-
 - (IBAction)toggleOpen:(id)sender {
     [self toggleOpenWithUserAction:YES];
 }
 
-- (void)toggleOpenWithUserAction:(BOOL)userAction {
-
+- (void)toggleOpenWithUserAction:(BOOL)userAction{
+    
     self.disclosureButton.selected = !self.disclosureButton.selected;
-    self.section.open = !self.section.open;
+    
     if (userAction) {
-        if (self.section.open) {
+        if (self.disclosureButton.selected) {
             if ([self.delegate respondsToSelector:@selector(sectionHeaderView:sectionOpened:)]) {
-                [self.delegate sectionHeaderView:self sectionOpened:self.section.sectionIndex];
+                [self.delegate sectionHeaderView:self sectionOpened:self.section];
             }
-        }else {
+        }
+        else {
             if ([self.delegate respondsToSelector:@selector(sectionHeaderView:sectionClosed:)]) {
-                [self.delegate sectionHeaderView:self sectionClosed:self.section.sectionIndex];
+                [self.delegate sectionHeaderView:self sectionClosed:self.section];
             }
         }
     }
+    
+}
 
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    [self.overHeaderView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
 
 - (void)addOverHeaderSubView:(UIView *)view{

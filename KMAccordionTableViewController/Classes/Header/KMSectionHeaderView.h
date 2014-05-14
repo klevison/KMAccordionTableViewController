@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KMSection.h"
 
 @class KMSectionHeaderView;
 
 @protocol KMSectionHeaderViewDelegate <NSObject>
 
 @optional
+
 - (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView sectionOpened:(NSInteger)section;
 
 - (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView sectionClosed:(NSInteger)section;
@@ -30,7 +30,7 @@
 @property(nonatomic, strong) UIColor *headerColor;
 @property(nonatomic, strong) UIColor *headerSeparatorColor;
 @property(weak, nonatomic) IBOutlet UIView *headerSeparatorView;
-@property(nonatomic) KMSection *section;
+@property(nonatomic) NSInteger section;
 @property (weak, nonatomic) IBOutlet UIView *backgroundHeaderView;
 @property (weak, nonatomic) IBOutlet UIView *overHeaderView;
 @property(nonatomic) UIImage *headerArrowImageOpened;
