@@ -44,7 +44,7 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
     return nil;
 }
 
-- (void)releloadOpenedSection
+- (void)reloadOpenedSection
 {
     KMSection *openedSection = [self getOpenedSection];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:openedSection.sectionIndex] withRowAnimation:UITableViewRowAnimationNone];

@@ -28,7 +28,10 @@
 
 @interface KMAccordionTableViewController : UITableViewController
 
-- (void)releloadOpenedSection;
+/**
+ Updates the opened section.
+ */
+- (void)reloadOpenedSection;
 
 /**
  Sets AccordionTableView's datasource.

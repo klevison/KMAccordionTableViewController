@@ -51,7 +51,7 @@
     
     UIView *view = section.view;
     view.frame = CGRectMake(0, 0, 320, 400);
-    [self releloadOpenedSection];
+    [self reloadOpenedSection];
 }
 
 - (NSArray *)getSectionArray {
