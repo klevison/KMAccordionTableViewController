@@ -33,6 +33,24 @@ static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
+- (KMSection *)getOpenedSection
+{
+    for (KMSection *section in self.sections){
+        if (section.open) {
+            return section;
+            break;
+        }
+    }
+    return nil;
+}
+
+- (void)releloadOpenedSection
+{
+    KMSection *openedSection = [self getOpenedSection];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:openedSection.sectionIndex] withRowAnimation:UITableViewRowAnimationNone];
+    [openedSection.headerView toggleOpenWithUserAction:NO];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
