@@ -11,21 +11,21 @@
 @implementation KMSectionHeaderView
 
 - (void)awakeFromNib {
-    
+
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                  action:@selector(toggleOpen:)];
     [self addGestureRecognizer:tapGesture];
-    
+
 }
 
 - (IBAction)toggleOpen:(id)sender {
     [self toggleOpenWithUserAction:YES];
 }
 
-- (void)toggleOpenWithUserAction:(BOOL)userAction{
-    
+- (void)toggleOpenWithUserAction:(BOOL)userAction {
+
     self.disclosureButton.selected = !self.disclosureButton.selected;
-    
+
     if (userAction) {
         if (self.disclosureButton.selected) {
             if ([self.delegate respondsToSelector:@selector(sectionHeaderView:sectionOpened:)]) {
@@ -38,41 +38,29 @@
             }
         }
     }
-    
+
 }
 
-- (void)prepareForReuse
-{
+- (void)prepareForReuse {
     [super prepareForReuse];
     [self.overHeaderView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
 
-- (void)addOverHeaderSubView:(UIView *)view{
+- (void)addOverHeaderSubView:(UIView *)view {
     [self.overHeaderView addSubview:view];
 }
 
-- (void)setHeaderSeparatorColor:(UIColor *)headerSeparatorColor {
-    self.headerSeparatorView.backgroundColor = headerSeparatorColor;
-}
+- (void)setHeaderSectionAppearence:(KMAppearence *)headerSectionAppearence {
 
-- (void)setHeaderColor:(UIColor *)headerColor {
-    self.backgroundHeaderView.backgroundColor = headerColor;
-}
+    _headerSectionAppearence = headerSectionAppearence;
 
-- (void)setHeaderFont:(UIFont *)headerFont {
-    self.titleLabel.font = headerFont;
-}
+    self.headerSeparatorView.backgroundColor = headerSectionAppearence.headerSeparatorColor;
+    self.backgroundHeaderView.backgroundColor = headerSectionAppearence.headerColor;
+    self.titleLabel.font = headerSectionAppearence.headerFont;
+    self.titleLabel.textColor = headerSectionAppearence.headerTitleColor;
+    [self.disclosureButton setImage:headerSectionAppearence.headerArrowImageOpened forState:UIControlStateNormal];
+    [self.disclosureButton setImage:headerSectionAppearence.headerArrowImageClosed forState:UIControlStateSelected];
 
-- (void)setHeaderTitleColor:(UIColor *)headerTitleColor {
-    self.titleLabel.textColor = headerTitleColor;
-}
-
-- (void)setHeaderArrowImageOpened:(UIImage *)headerArrowImageOpened{
-    [self.disclosureButton setImage:headerArrowImageOpened forState:UIControlStateNormal];
-}
-
-- (void)setHeaderArrowImageClosed:(UIImage *)headerArrowImageClosed{
-    [self.disclosureButton setImage:headerArrowImageClosed forState:UIControlStateSelected];
 }
 
 @end

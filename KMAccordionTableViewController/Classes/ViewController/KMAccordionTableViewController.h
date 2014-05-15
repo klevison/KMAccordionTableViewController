@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "KMSection.h"
 #import "KMSectionHeaderView.h"
+#import "KMAppearence.h"
 
 @class KMAccordionTableViewController;
 @class KMSection;
+@class KMAppearence;
 
 @protocol KMAccordionTableViewControllerDataSource <NSObject>
 
@@ -42,40 +44,41 @@
  Sets section's view.
  */
 @property(nonatomic, strong) NSArray *sections;
+@property(nonatomic, strong) KMAppearence *sectionAppearence;
 
 /**
  Sets section header height.
  */
-@property(nonatomic, assign) NSInteger headerHeight;
+- (void)setHeaderHeight:(float)height;
 
 /**
  Sets section header font.
  */
-@property(nonatomic, strong) UIFont *headerFont;
+- (void)setHeaderFont:(UIFont *)headerFont;
 
 /**
  Sets section header font color.
  */
-@property(nonatomic, strong) UIColor *headerTitleColor;
+- (void)setHeaderTitleColor:(UIColor *)headerTitleColor;
 
 /**
  Sets section header background color.
  */
-@property(nonatomic, strong) UIColor *headerColor;
+- (void)setHeaderColor:(UIColor *)headerColor;
 
 /**
  Sets section header separator color.
  */
-@property(nonatomic, strong) UIColor *headerSeparatorColor;
+- (void)setHeaderSeparatorColor:(UIColor *)headerSeparatorColor;
 
 /**
  Sets section header disclosure opened image.
  */
-@property(nonatomic) UIImage *headerArrowImageOpened;
+- (void)setHeaderArrowImageOpened:(UIImage *)headerArrowImageOpened;
 
 /**
  Sets section header disclosure closed image.
  */
-@property(nonatomic) UIImage *headerArrowImageClosed;
+- (void)setHeaderArrowImageClosed:(UIImage *)headerArrowImageClosed;
 
 @end

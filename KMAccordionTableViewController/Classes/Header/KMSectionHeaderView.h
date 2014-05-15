@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KMAppearence.h"
 
 @class KMSectionHeaderView;
 
@@ -25,18 +26,14 @@
 @property(nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property(nonatomic, weak) IBOutlet UIButton *disclosureButton;
 @property(nonatomic, weak) IBOutlet id <KMSectionHeaderViewDelegate> delegate;
-@property(nonatomic, strong) UIFont *headerFont;
-@property(nonatomic, strong) UIColor *headerTitleColor;
-@property(nonatomic, strong) UIColor *headerColor;
-@property(nonatomic, strong) UIColor *headerSeparatorColor;
 @property(weak, nonatomic) IBOutlet UIView *headerSeparatorView;
 @property(nonatomic) NSInteger section;
-@property (weak, nonatomic) IBOutlet UIView *backgroundHeaderView;
-@property (weak, nonatomic) IBOutlet UIView *overHeaderView;
-@property(nonatomic) UIImage *headerArrowImageOpened;
-@property(nonatomic) UIImage *headerArrowImageClosed;
+@property(weak, nonatomic) IBOutlet UIView *backgroundHeaderView;
+@property(weak, nonatomic) IBOutlet UIView *overHeaderView;
+@property(nonatomic, strong) KMAppearence *headerSectionAppearence;
 
 - (void)toggleOpenWithUserAction:(BOOL)userAction;
+
 - (void)addOverHeaderSubView:(UIView *)view;
 
 @end
