@@ -6,6 +6,10 @@ Accordion UITableViewController component based on Apples's example.
   <img align="center" src="http://recordit.co/juLug4JLzx.gif" alt="...">
 </p>
 
+## Current Version
+
+Version: 0.1.1
+
 ## Under the Hood
 
 * Uses ARC (Automatic Reference Counting)
