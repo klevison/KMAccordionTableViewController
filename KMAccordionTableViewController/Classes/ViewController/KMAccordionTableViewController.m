@@ -20,6 +20,14 @@
 static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
 static NSString *SectionCellID = @"CellIdentifier";
 
+-(instancetype) initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.sectionAppearence = [[KMAppearence alloc] init];
+    }
+    return self;
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
