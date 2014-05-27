@@ -84,7 +84,7 @@ If you don't use CocoaPods, import the all files from "Classes" directory to you
 
 - (CGFloat)accordionTableView:(KMAccordionTableViewController *)accordionTableView heightForSectionAtIndex:(NSInteger)index{
     KMSection *section = self.sections[index];
-    return section.frame.size.height;
+    return section.view.frame.size.height;
 }
 
 - (void)viewDidLoad {
