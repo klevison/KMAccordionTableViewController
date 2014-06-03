@@ -15,9 +15,7 @@
 
 @optional
 
-- (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView sectionOpened:(NSInteger)section;
-
-- (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView sectionClosed:(NSInteger)section;
+- (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView selectedSectionAtIndex:(NSInteger)section;
 
 @end
 
@@ -31,8 +29,7 @@
 @property(weak, nonatomic) IBOutlet UIView *backgroundHeaderView;
 @property(weak, nonatomic) IBOutlet UIView *overHeaderView;
 @property(nonatomic, strong) KMAppearence *headerSectionAppearence;
-
-- (void)toggleOpenWithUserAction:(BOOL)userAction;
+@property UITapGestureRecognizer *tapGesture;
 
 - (void)addOverHeaderSubView:(UIView *)view;
 
