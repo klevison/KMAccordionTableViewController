@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144BCC01198278DC009D3E5C /* facebook_email.png in Resources */ = {isa = PBXBuildFile; fileRef = 144BCBFE198278DC009D3E5C /* facebook_email.png */; };
+		144BCC02198278DC009D3E5C /* linkdin_Email.png in Resources */ = {isa = PBXBuildFile; fileRef = 144BCBFF198278DC009D3E5C /* linkdin_Email.png */; };
+		144BCC03198278DC009D3E5C /* Skype_Email.png in Resources */ = {isa = PBXBuildFile; fileRef = 144BCC00198278DC009D3E5C /* Skype_Email.png */; };
 		6F4882DDE569E80F4FABE10A /* KMAppearence.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F488B930B10737E789F36D8 /* KMAppearence.m */; };
 		7140F31EFEDB44F5927FE2FF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A2F813C2DB48A6ACECC1AD /* libPods.a */; };
 		BE6DEF6519180BD4008490FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6DEF6419180BD4008490FC /* Foundation.framework */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		144BCBFE198278DC009D3E5C /* facebook_email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_email.png; sourceTree = "<group>"; };
+		144BCBFF198278DC009D3E5C /* linkdin_Email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkdin_Email.png; sourceTree = "<group>"; };
+		144BCC00198278DC009D3E5C /* Skype_Email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Skype_Email.png; sourceTree = "<group>"; };
 		38CD84FE5C9546799E339B87 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		58A2F813C2DB48A6ACECC1AD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F488A7756D3B290E2C1C9C3 /* KMAppearence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMAppearence.h; sourceTree = "<group>"; };
@@ -218,6 +224,9 @@
 		BE6DEFA519180D2A008490FC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				144BCBFE198278DC009D3E5C /* facebook_email.png */,
+				144BCBFF198278DC009D3E5C /* linkdin_Email.png */,
+				144BCC00198278DC009D3E5C /* Skype_Email.png */,
 				BE6DEFA619180D2A008490FC /* carat-open.png */,
 				BE6DEFA719180D2A008490FC /* carat.png */,
 			);
@@ -303,7 +312,10 @@
 			files = (
 				BE6DEFA119180C7A008490FC /* KMSectionHeaderView.xib in Resources */,
 				BE6DEF6F19180BD4008490FC /* InfoPlist.strings in Resources */,
+				144BCC01198278DC009D3E5C /* facebook_email.png in Resources */,
 				BE6DEF7719180BD5008490FC /* Images.xcassets in Resources */,
+				144BCC02198278DC009D3E5C /* linkdin_Email.png in Resources */,
+				144BCC03198278DC009D3E5C /* Skype_Email.png in Resources */,
 				BE6DEFA819180D2A008490FC /* carat-open.png in Resources */,
 				BE6DEFA919180D2A008490FC /* carat.png in Resources */,
 			);

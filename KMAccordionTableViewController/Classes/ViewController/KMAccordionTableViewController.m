@@ -19,6 +19,7 @@
 
 static NSString *SectionHeaderViewIdentifier = @"SectionHeaderViewIdentifier";
 static NSString *SectionCellID = @"CellIdentifier";
+static bool oneSectionAlwaysOpen = NO;
 
 -(instancetype) initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -70,6 +71,11 @@ static NSString *SectionCellID = @"CellIdentifier";
 
 - (void)setHeaderArrowImageClosed:(UIImage *)headerArrowImageClosed {
     [self.sectionAppearence setHeaderArrowImageClosed:headerArrowImageClosed];
+}
+
+- (void)setOneSectionAlwaysOpen:(BOOL)isOpen
+{
+    oneSectionAlwaysOpen = isOpen;
 }
 
 #pragma mark - Class Methods
@@ -151,16 +157,23 @@ static NSString *SectionCellID = @"CellIdentifier";
     currentSection.headerView = sectionHeaderView;
 
     sectionHeaderView.titleLabel.text = currentSection.title;
+    [sectionHeaderView.imageView setImage:currentSection.image];
     [sectionHeaderView setSection:sectionIndex];
     [sectionHeaderView setDelegate:self];
-
+    UIColor *tempcolor = self.sectionAppearence.headerColor;
+    if (currentSection.colorForBackground) {
+        [self.sectionAppearence setHeaderColor:currentSection.colorForBackground];
+    }
     [sectionHeaderView setHeaderSectionAppearence:self.sectionAppearence];
+    [self.sectionAppearence setHeaderColor:tempcolor];
     if (currentSection.overHeaderView) {
         [sectionHeaderView addOverHeaderSubView:currentSection.overHeaderView];
     }
 
     [self configureSectionsCell:currentSection];
-
+    if (oneSectionAlwaysOpen && (sectionIndex == 0)) {
+        [self sectionHeaderView:sectionHeaderView sectionOpened:0];
+    }
     return sectionHeaderView;
 }
 
@@ -173,7 +186,7 @@ static NSString *SectionCellID = @"CellIdentifier";
     
     if (!section.open) {
         [self sectionHeaderView:sectionHeaderView sectionOpened:sectionOpened];
-    }else{
+    }else if (!oneSectionAlwaysOpen) {
         [self sectionHeaderView:sectionHeaderView sectionClosed:sectionOpened];
     }
     

@@ -22,6 +22,7 @@
 @interface KMSectionHeaderView : UITableViewHeaderFooterView
 
 @property(nonatomic, weak) IBOutlet UILabel *titleLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
 @property(nonatomic, weak) IBOutlet UIButton *disclosureButton;
 @property(nonatomic, weak) IBOutlet id <KMSectionHeaderViewDelegate> delegate;
 @property(weak, nonatomic) IBOutlet UIView *headerSeparatorView;
@@ -32,6 +33,7 @@
 @property UITapGestureRecognizer *tapGesture;
 
 - (void)addOverHeaderSubView:(UIView *)view;
+- (IBAction)toggleOpen:(id)sender;
 
 @end
 
