@@ -3,7 +3,7 @@
 Accordion UITableViewController component based on Apples's example.
 
 <p align="center">
-  <img align="center" src="http://recordit.co/juLug4JLzx.gif" alt="...">
+  <img align="center" src="juLug4JLzx.gif" alt="...">
 </p>
 
 ## Current Version
