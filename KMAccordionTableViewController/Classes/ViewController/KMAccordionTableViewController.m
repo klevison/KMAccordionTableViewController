@@ -209,6 +209,10 @@ static bool oneSectionAlwaysOpen = NO;
         KMSection *previousOpenSection = (self.sections)[previousOpenSectionIndex];
         previousOpenSection.open = NO;
         [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:0 inSection:previousOpenSectionIndex]];
+        if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidClosed:)]) {
+            KMSection *previuosSection = (self.sections)[previousOpenSectionIndex];
+            [self.delegate accordionTableViewControllerSectionDidClosed:previuosSection];
+        }
     }
     
     [self.tableView beginUpdates];
@@ -221,6 +225,9 @@ static bool oneSectionAlwaysOpen = NO;
     
     self.openSectionIndex = sectionOpened;
     
+    if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidOpened:)]) {
+        [self.delegate accordionTableViewControllerSectionDidOpened:section];
+    }
 }
 
 - (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView sectionClosed:(NSInteger)sectionClosed {
@@ -238,6 +245,10 @@ static bool oneSectionAlwaysOpen = NO;
     
     self.openSectionIndex = NSNotFound;
     
+    if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidClosed:)]) {
+        [self.delegate accordionTableViewControllerSectionDidClosed:currentSection];
+    }
+
 }
 
 @end

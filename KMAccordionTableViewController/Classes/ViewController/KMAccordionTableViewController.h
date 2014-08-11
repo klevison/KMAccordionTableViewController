@@ -15,6 +15,13 @@
 @class KMSection;
 @class KMAppearence;
 
+@protocol KMAccordionTableViewControllerDelegate <NSObject>
+
+- (void)accordionTableViewControllerSectionDidOpened:(KMSection *)section;
+- (void)accordionTableViewControllerSectionDidClosed:(KMSection *)section;
+
+@end
+
 @protocol KMAccordionTableViewControllerDataSource <NSObject>
 
 @required
@@ -34,6 +41,11 @@
  Updates the opened section.
  */
 - (void)reloadOpenedSection;
+
+/**
+ Sets AccordionTableView's delegate.
+ */
+@property(nonatomic, assign) id <KMAccordionTableViewControllerDelegate> delegate;
 
 /**
  Sets AccordionTableView's datasource.

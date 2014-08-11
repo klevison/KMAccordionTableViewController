@@ -20,6 +20,7 @@
 
 - (IBAction)toggleOpen:(id)sender
 {
+    self.disclosureButton.selected = !self.disclosureButton.selected;
     [self.delegate sectionHeaderView:self selectedSectionAtIndex:self.section];
 }
 

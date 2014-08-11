@@ -8,7 +8,7 @@
 
 #import "MyViewController.h"
 
-@interface MyViewController () <KMAccordionTableViewControllerDataSource>
+@interface MyViewController () <KMAccordionTableViewControllerDataSource,KMAccordionTableViewControllerDelegate>
 
 @end
 
@@ -31,7 +31,8 @@
     [super viewDidLoad];
 
     self.dataSource = self;
-
+    self.delegate = self;
+    
     self.sections = [self getSectionArray];
     [self setupAppearence];
 
@@ -108,6 +109,18 @@
     section6.image = [UIImage imageNamed:@"Skype_Email"];
 
     return @[section1, section2, section3, section5, section6];
+}
+
+#pragma mark - KMAccordionTableViewControllerDelegate
+
+- (void)accordionTableViewControllerSectionDidClosed:(KMSection *)section
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+}
+
+- (void)accordionTableViewControllerSectionDidOpened:(KMSection *)section
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
 }
 
 @end
