@@ -8,7 +8,7 @@ Accordion UITableViewController component based on Apples's example.
 
 ## Current Version
 
-Version: 0.1.2
+Version: 0.1.3
 
 ## Under the Hood
 
