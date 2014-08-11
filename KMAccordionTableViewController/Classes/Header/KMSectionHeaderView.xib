@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KMTableViewController"/>
@@ -12,10 +12,12 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uju-4A-bTW">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmV-0D-x5a">
                     <rect key="frame" x="272" y="0.0" width="47" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -25,31 +27,39 @@
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vo7-QZ-Maa">
                     <rect key="frame" x="0.0" y="0.0" width="271" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook_email.png" translatesAutoresizingMaskIntoConstraints="NO" id="405-ua-7tC">
+                            <rect key="frame" x="20" y="5" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbG-Fq-5Ap">
-                            <rect key="frame" x="13" y="14" width="260" height="21"/>
+                            <rect key="frame" x="73" y="14" width="200" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="260" id="G4M-3O-jHZ"/>
+                                <constraint firstAttribute="width" constant="200" id="G4M-3O-jHZ"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wkr-Fq-D4M">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="cbG-Fq-5Ap" firstAttribute="leading" secondItem="Vo7-QZ-Maa" secondAttribute="leading" constant="13" id="1k4-Co-mBx"/>
-                        <constraint firstAttribute="centerX" secondItem="cbG-Fq-5Ap" secondAttribute="centerX" constant="-7.5" id="5M2-57-JHa"/>
+                        <constraint firstItem="cbG-Fq-5Ap" firstAttribute="leading" secondItem="Vo7-QZ-Maa" secondAttribute="leading" constant="73" id="1k4-Co-mBx"/>
+                        <constraint firstAttribute="centerX" secondItem="cbG-Fq-5Ap" secondAttribute="centerX" constant="-37.5" id="5M2-57-JHa"/>
                         <constraint firstItem="cbG-Fq-5Ap" firstAttribute="centerY" secondItem="Vo7-QZ-Maa" secondAttribute="centerY" constant="1" id="pwe-ya-TVy"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJA-Jn-ogR">
                     <rect key="frame" x="0.0" y="47" width="320" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wkr-Fq-D4M">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <constraints>
@@ -70,14 +80,17 @@
                 <constraint firstItem="WJA-Jn-ogR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xO7-xy-4qU"/>
                 <constraint firstAttribute="trailing" secondItem="mmV-0D-x5a" secondAttribute="trailing" constant="1" id="zfN-lx-Z8D"/>
             </constraints>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="backgroundHeaderView" destination="Uju-4A-bTW" id="n6s-hd-JAo"/>
                 <outlet property="disclosureButton" destination="mmV-0D-x5a" id="9fA-4g-lpl"/>
                 <outlet property="headerSeparatorView" destination="WJA-Jn-ogR" id="qoo-HK-DDX"/>
+                <outlet property="imageView" destination="405-ua-7tC" id="NUQ-pA-Smf"/>
                 <outlet property="overHeaderView" destination="Wkr-Fq-D4M" id="erI-pZ-lMs"/>
                 <outlet property="titleLabel" destination="cbG-Fq-5Ap" id="0KR-pz-tuK"/>
             </connections>
         </view>
     </objects>
+    <resources>
+        <image name="facebook_email.png" width="16" height="16"/>
+    </resources>
 </document>

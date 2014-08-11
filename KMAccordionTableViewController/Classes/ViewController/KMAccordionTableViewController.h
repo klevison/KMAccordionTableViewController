@@ -81,4 +81,9 @@
  */
 - (void)setHeaderArrowImageClosed:(UIImage *)headerArrowImageClosed;
 
+/**
+ Sets if one section will always be open.
+ */
+- (void)setOneSectionAlwaysOpen:(BOOL)isOpen;
+
 @end

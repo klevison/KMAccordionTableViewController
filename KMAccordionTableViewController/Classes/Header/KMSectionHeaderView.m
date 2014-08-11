@@ -42,7 +42,6 @@
     self.titleLabel.textColor = headerSectionAppearence.headerTitleColor;
     [self.disclosureButton setImage:headerSectionAppearence.headerArrowImageOpened forState:UIControlStateNormal];
     [self.disclosureButton setImage:headerSectionAppearence.headerArrowImageClosed forState:UIControlStateSelected];
-    
 }
 
 @end

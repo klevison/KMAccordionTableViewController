@@ -17,6 +17,8 @@
 @property UIView *overHeaderView;
 @property KMSectionHeaderView *headerView;
 @property(nonatomic, copy) NSString *title;
+@property(nonatomic, copy) UIImage *image;
+@property(nonatomic, copy) UIColor *colorForBackground;
 @property NSInteger sectionIndex;
 
 @end
