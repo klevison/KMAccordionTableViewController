@@ -179,9 +179,8 @@ static bool oneSectionAlwaysOpen = NO;
 
 #pragma mark - SectionHeaderViewDelegate
 
-- (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView selectedSectionAtIndex:(NSInteger)sectionOpened
-{
-    
+- (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView selectedSectionAtIndex:(NSInteger)sectionOpened {
+
     KMSection *section = (self.sections)[sectionOpened];
     
     if (!section.open) {
@@ -209,9 +208,16 @@ static bool oneSectionAlwaysOpen = NO;
         KMSection *previousOpenSection = (self.sections)[previousOpenSectionIndex];
         previousOpenSection.open = NO;
         [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:0 inSection:previousOpenSectionIndex]];
-        if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidClosed:)]) {
-            KMSection *previuosSection = (self.sections)[previousOpenSectionIndex];
-            [self.delegate accordionTableViewControllerSectionDidClosed:previuosSection];
+
+        if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidChangeOpen:)]) {
+            [self.delegate accordionTableViewControllerSectionDidChangeOpen:section];
+        }
+    }
+    else {
+        self.openSectionIndex = sectionOpened;
+
+        if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidOpen:)]) {
+            [self.delegate accordionTableViewControllerSectionDidOpen:section];
         }
     }
     
@@ -219,15 +225,6 @@ static bool oneSectionAlwaysOpen = NO;
     [self.tableView insertRowsAtIndexPaths:indexPathsToInsert withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView endUpdates];
-    
-    CGRect sectionRect = [self.tableView rectForSection:sectionOpened];
-    [self.tableView scrollRectToVisible:sectionRect animated:YES];
-    
-    self.openSectionIndex = sectionOpened;
-    
-    if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidOpened:)]) {
-        [self.delegate accordionTableViewControllerSectionDidOpened:section];
-    }
 }
 
 - (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView sectionClosed:(NSInteger)sectionClosed {
@@ -240,13 +237,16 @@ static bool oneSectionAlwaysOpen = NO;
     if (countOfRowsToDelete > 0) {
         NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
         [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:0 inSection:sectionClosed]];
+
+        [self.tableView beginUpdates];
         [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView endUpdates];
     }
     
     self.openSectionIndex = NSNotFound;
     
-    if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidClosed:)]) {
-        [self.delegate accordionTableViewControllerSectionDidClosed:currentSection];
+    if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidClose:)]) {
+        [self.delegate accordionTableViewControllerSectionDidClose:currentSection];
     }
 
 }
