@@ -214,7 +214,6 @@ static bool oneSectionAlwaysOpen = NO;
     }
     self.openSectionIndex = sectionOpened;
 
-    [self.tableView reloadData];
 }
 
 - (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView sectionClosed:(NSInteger)sectionClosed {
