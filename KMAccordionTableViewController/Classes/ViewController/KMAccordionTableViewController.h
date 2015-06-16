@@ -17,8 +17,10 @@
 
 @protocol KMAccordionTableViewControllerDelegate <NSObject>
 
-- (void)accordionTableViewControllerSectionDidOpened:(KMSection *)section;
-- (void)accordionTableViewControllerSectionDidClosed:(KMSection *)section;
+@optional
+- (void)accordionTableViewControllerSectionDidOpen:(KMSection *)section;
+- (void)accordionTableViewControllerSectionDidChangeOpen:(KMSection *)section;
+- (void)accordionTableViewControllerSectionDidClose:(KMSection *)section;
 
 @end
 
