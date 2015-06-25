@@ -59,9 +59,9 @@
     [self setHeaderArrowImageClosed:[UIImage imageNamed:@"carat-open"]];
     [self setHeaderArrowImageOpened:[UIImage imageNamed:@"carat"]];
     [self setHeaderFont:[UIFont fontWithName:@"HelveticaNeue" size:15]];
-    [self setHeaderTitleColor:[UIColor greenColor]];
+    [self setHeaderTitleColor:[UIColor blackColor]];
     [self setHeaderSeparatorColor:[UIColor colorWithRed:0.157 green:0.157 blue:0.157 alpha:1]];
-    [self setHeaderColor:[UIColor colorWithRed:0.114 green:0.114 blue:0.114 alpha:1]]; //general background color for all of the sections
+    [self setHeaderColor:[UIColor lightGrayColor]]; //general background color for all of the sections
     [self setOneSectionAlwaysOpen:NO]; // set if one section should always be open. if set to YES, the VC will load with the first section already open, and the open section will not close unless you click a different section
 }
 
@@ -71,29 +71,6 @@
     UIView *view = section.view;
     view.frame = CGRectMake(0, 0, self.view.frame.size.width, 400);
     [self reloadOpenedSection];
-}
-
-- (void)updateAllSections
-{
-    KMSection *section1 = self.sections[0];
-    UIView *view1 = section1.view;
-    view1.frame = CGRectMake(0, 0, self.view.frame.size.width, 50);
-    
-    KMSection *section2 = self.sections[1];
-    UIView *view2 = section2.view;
-    view2.frame = CGRectMake(0, 0, self.view.frame.size.width, 50);
-    
-    KMSection *section3 = self.sections[2];
-    UIView *view3 = section3.view;
-    view3.frame = CGRectMake(0, 0, self.view.frame.size.width, 50);
-    
-    KMSection *section4 = self.sections[3];
-    UIView *view4 = section4.view;
-    view4.frame = CGRectMake(0, 0, self.view.frame.size.width, 50);
-    
-    [self reloadSectionsAtIndexes:@[@1,@2,@3,@4]];
-    
-    [self reloadAllSections];
 }
 
 - (void)updateSectionsOneAndTwo
@@ -106,7 +83,7 @@
     UIView *view2 = section2.view;
     view2.frame = CGRectMake(0, 0, self.view.frame.size.width, 100);
     
-    [self reloadSectionsAtIndexes:@[@1,@2]];
+    [self reloadOpenedSection];
 }
 
 - (NSArray *)getSectionArray
@@ -128,7 +105,7 @@
     KMSection *section1 = [KMSection new];
     section1.view = viewOfSection1;
     section1.title = @"Facebook";
-    section1.backgroundColor = [UIColor redColor]; // individual background color for a specific section, overrides the general color if set
+    //section1.backgroundColor = [UIColor redColor]; // individual background color for a specific section, overrides the general color if set
     
     UIImageView *overlayViewSection1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, [self headerHeight] - 1)];
     overlayViewSection1.backgroundColor = [UIColor whiteColor];
@@ -152,7 +129,7 @@
     KMSection *section2 = [[KMSection alloc] init];
     section2.view = viewOfSection2;
     section2.title = @"Twitter";
-    section2.backgroundColor = [UIColor orangeColor];
+    //section1.backgroundColor = [UIColor redColor]; // individual background color for a specific section, overrides the general color if set
     
     UIImageView *overlayViewSection2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, [self headerHeight] - 1)];
     overlayViewSection2.backgroundColor = [UIColor blueColor];
@@ -177,12 +154,7 @@
     KMSection *section3 = [[KMSection alloc] init];
     section3.view = viewOfSection3;
     section3.title = @"Reload All Section";
-    section3.backgroundColor = [UIColor blueColor];
-    
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
-    [button setTitle:@"Reload all sections" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(updateAllSections) forControlEvents:UIControlEventTouchUpInside];
-    [viewOfSection3 addSubview:button];
+    //section1.backgroundColor = [UIColor redColor]; // individual background color for a specific section, overrides the general color if set
     
     return section3;
 }
@@ -198,7 +170,7 @@
     KMSection *section4 = [[KMSection alloc] init];
     section4.view = viewController.view;
     section4.title = @"Last Section";
-    section4.backgroundColor = [UIColor yellowColor];
+    //section1.backgroundColor = [UIColor redColor]; // individual background color for a specific section, overrides the general color if set
     
     return section4;
 }
@@ -221,8 +193,10 @@
 {
     KMSection *section = self.sections[3];
     section.view.frame = CGRectMake(0, 0, size.width, size.height);
-
-    [self reloadSectionsAtIndexes:@[@3]];
+    
+    if (self.openedSectionIndex == 3) {
+        [self reloadOpenedSection];
+    }
 }
 
 @end

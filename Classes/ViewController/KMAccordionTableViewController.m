@@ -11,7 +11,6 @@
 
 @interface KMAccordionTableViewController () <KMSectionHeaderViewDelegate>
 
-@property (nonatomic) NSInteger openSectionIndex;
 @property UITableViewRowAnimation closeAnimation;
 @property UITableViewRowAnimation openAnimation;
 
@@ -48,7 +47,7 @@ static bool oneSectionAlwaysOpen = NO;
     self.sectionAppearence = [KMAppearence new];
     self.openAnimation = UITableViewRowAnimationFade;
     self.closeAnimation = UITableViewRowAnimationFade;
-    self.openSectionIndex = NSNotFound;
+    self.openedSectionIndex = NSNotFound;
 }
 
 - (void)viewDidLoad
@@ -138,36 +137,6 @@ static bool oneSectionAlwaysOpen = NO;
     if (openedSection) {
         NSArray *cellToReloadArray = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:openedSection.sectionIndex]];
         [self.tableView reloadRowsAtIndexPaths:cellToReloadArray withRowAnimation:self.openAnimation];
-    }
-}
-
-- (void)reloadAllSections
-{
-    if (self.sections.count > 0) {
-        
-        NSMutableArray *cellToReloadArray = [NSMutableArray array];
-        
-        for (KMSection *section in self.sections) {
-            [cellToReloadArray addObject:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:section.sectionIndex]]];
-        }
-        
-        [self.tableView reloadRowsAtIndexPaths:cellToReloadArray withRowAnimation:self.openAnimation];
-        
-    }
-}
-
-- (void)reloadSectionsAtIndexes:(NSArray *)indexes
-{
-    if (indexes.count > 0) {
-        
-        NSMutableArray *cellToReloadArray = [NSMutableArray array];
-        
-        for (NSNumber *index in indexes) {
-            [cellToReloadArray addObject:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:[index intValue]]]];
-        }
-        
-        [self.tableView reloadRowsAtIndexPaths:cellToReloadArray withRowAnimation:self.openAnimation];
-        
     }
 }
 
@@ -286,7 +255,7 @@ static bool oneSectionAlwaysOpen = NO;
     
     NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
     
-    NSInteger previousOpenSectionIndex = self.openSectionIndex;
+    NSInteger previousOpenSectionIndex = self.openedSectionIndex;
     
     if (previousOpenSectionIndex != NSNotFound) {
         KMSection *previousOpenSection = (self.sections)[previousOpenSectionIndex];
@@ -306,7 +275,7 @@ static bool oneSectionAlwaysOpen = NO;
     CGRect sectionRect = [self.tableView rectForSection:sectionOpened];
     [self.tableView scrollRectToVisible:sectionRect animated:YES];
     
-    self.openSectionIndex = sectionOpened;
+    self.openedSectionIndex = sectionOpened;
     
     if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidOpen:)]) {
         [self.delegate accordionTableViewControllerSectionDidOpen:section];
@@ -327,7 +296,7 @@ static bool oneSectionAlwaysOpen = NO;
         [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:self.closeAnimation];
     }
     
-    self.openSectionIndex = NSNotFound;
+    self.openedSectionIndex = NSNotFound;
     
     if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidClose:)]) {
         [self.delegate accordionTableViewControllerSectionDidClose:currentSection];

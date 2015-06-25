@@ -50,10 +50,6 @@
  */
 - (void)reloadOpenedSection;
 
-- (void)reloadAllSections;
-
-- (void)reloadSectionsAtIndexes:(NSArray *)indexes;
-
 /**
  Sets AccordionTableView's delegate.
  */
@@ -69,6 +65,7 @@
  */
 @property(nonatomic, strong) NSArray *sections;
 @property(nonatomic, strong) KMAppearence *sectionAppearence;
+@property (nonatomic) NSInteger openedSectionIndex;
 
 /**
  Sets section header height.
