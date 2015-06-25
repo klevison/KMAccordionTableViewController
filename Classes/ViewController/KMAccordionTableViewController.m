@@ -200,6 +200,8 @@ static bool oneSectionAlwaysOpen = NO;
     [sectionHeaderView setSection:sectionIndex];
     [sectionHeaderView setDelegate:self];
     
+    sectionHeaderView.disclosureButton.selected = currentSection.isOpen;
+    
     UIColor *tempcolor = self.sectionAppearence.headerColor;
     if (currentSection.backgroundColor) {
         [self.sectionAppearence setHeaderColor:currentSection.backgroundColor];
@@ -250,20 +252,21 @@ static bool oneSectionAlwaysOpen = NO;
     
     section.open = YES;
     
-    NSMutableArray *indexPathsToInsert = [[NSMutableArray alloc] init];
+    NSMutableArray *indexPathsToInsert = [NSMutableArray array];
     [indexPathsToInsert addObject:[NSIndexPath indexPathForRow:0 inSection:sectionOpened]];
     
-    NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
+    NSMutableArray *indexPathsToDelete = [NSMutableArray array];
     
     NSInteger previousOpenSectionIndex = self.openedSectionIndex;
     
     if (previousOpenSectionIndex != NSNotFound) {
         KMSection *previousOpenSection = (self.sections)[previousOpenSectionIndex];
+        KMSectionHeaderView *praviousSectionHeaderView = (KMSectionHeaderView *)[self.tableView headerViewForSection:previousOpenSectionIndex];
+        praviousSectionHeaderView.disclosureButton.selected = NO;
         previousOpenSection.open = NO;
         [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:0 inSection:previousOpenSectionIndex]];
         if ([self.delegate respondsToSelector:@selector(accordionTableViewControllerSectionDidClose:)]) {
-            KMSection *previuosSection = (self.sections)[previousOpenSectionIndex];
-            [self.delegate accordionTableViewControllerSectionDidClose:previuosSection];
+            [self.delegate accordionTableViewControllerSectionDidClose:previousOpenSection];
         }
     }
     
@@ -285,7 +288,7 @@ static bool oneSectionAlwaysOpen = NO;
 - (void)sectionHeaderView:(KMSectionHeaderView *)sectionHeaderView sectionClosed:(NSInteger)sectionClosed
 {
     
-    KMSection *currentSection = (self.sections)[sectionClosed];
+    KMSection *currentSection = self.sections[sectionClosed];
     
     currentSection.open = NO;
     NSInteger countOfRowsToDelete = [self.tableView numberOfRowsInSection:sectionClosed];
@@ -294,6 +297,7 @@ static bool oneSectionAlwaysOpen = NO;
         NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
         [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:0 inSection:sectionClosed]];
         [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:self.closeAnimation];
+        sectionHeaderView.disclosureButton.selected = NO;
     }
     
     self.openedSectionIndex = NSNotFound;

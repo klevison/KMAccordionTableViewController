@@ -10,7 +10,8 @@
 
 @implementation KMSection
 
-- (instancetype)init {
+- (instancetype)init
+{
     self = [super init];
     if (self) {
         _open = NO;
