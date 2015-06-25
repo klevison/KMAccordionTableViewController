@@ -62,7 +62,7 @@
     [self setHeaderTitleColor:[UIColor blackColor]];
     [self setHeaderSeparatorColor:[UIColor colorWithRed:0.157 green:0.157 blue:0.157 alpha:1]];
     [self setHeaderColor:[UIColor lightGrayColor]]; //general background color for all of the sections
-    [self setOneSectionAlwaysOpen:NO]; // set if one section should always be open. if set to YES, the VC will load with the first section already open, and the open section will not close unless you click a different section
+    [self setOneSectionAlwaysOpen:YES]; // set if one section should always be open. if set to YES, the VC will load with the first section already open, and the open section will not close unless you click a different section
 }
 
 - (void)updateSectionOne

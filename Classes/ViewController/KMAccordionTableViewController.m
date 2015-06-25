@@ -215,7 +215,7 @@ static bool oneSectionAlwaysOpen = NO;
     }
 
     [self configureSectionsCell:currentSection];
-    if (oneSectionAlwaysOpen && (sectionIndex == 0)) {
+    if (oneSectionAlwaysOpen && (sectionIndex == 0) && self.openedSectionIndex == NSNotFound) {
         [self sectionHeaderView:sectionHeaderView sectionOpened:0];
     }
     
