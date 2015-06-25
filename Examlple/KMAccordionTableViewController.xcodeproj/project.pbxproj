@@ -13,7 +13,7 @@
 		BE1BDE801B3B965F00C7E15F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1BDE7F1B3B965F00C7E15F /* Images.xcassets */; };
 		BE1BDE831B3B965F00C7E15F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1BDE811B3B965F00C7E15F /* LaunchScreen.xib */; };
 		BE1BDE8F1B3B966000C7E15F /* KMAccordionTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDE8E1B3B966000C7E15F /* KMAccordionTableViewControllerTests.m */; };
-		BE1BDE9A1B3B96BE00C7E15F /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDE991B3B96BE00C7E15F /* MyViewController.m */; };
+		BE1BDE9A1B3B96BE00C7E15F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDE991B3B96BE00C7E15F /* MainViewController.m */; };
 		BE1BDEA81B3B96CD00C7E15F /* KMSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDE9E1B3B96CD00C7E15F /* KMSectionHeaderView.m */; };
 		BE1BDEA91B3B96CD00C7E15F /* KMSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1BDE9F1B3B96CD00C7E15F /* KMSectionHeaderView.xib */; };
 		BE1BDEAA1B3B96CD00C7E15F /* KMAppearence.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDEA21B3B96CD00C7E15F /* KMAppearence.m */; };
@@ -24,6 +24,7 @@
 		BE6F7E341B3C797500999A82 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E2F1B3C797500999A82 /* facebook.png */; };
 		BE6F7E351B3C797500999A82 /* linkedin.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E301B3C797500999A82 /* linkedin.png */; };
 		BE6F7E361B3C797500999A82 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E311B3C797500999A82 /* twitter.png */; };
+		BE6F7E391B3C953400999A82 /* SectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6F7E381B3C953400999A82 /* SectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,8 @@
 		BE1BDE881B3B966000C7E15F /* KMAccordionTableViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMAccordionTableViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1BDE8D1B3B966000C7E15F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE1BDE8E1B3B966000C7E15F /* KMAccordionTableViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewControllerTests.m; sourceTree = "<group>"; };
-		BE1BDE981B3B96BE00C7E15F /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		BE1BDE991B3B96BE00C7E15F /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		BE1BDE981B3B96BE00C7E15F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		BE1BDE991B3B96BE00C7E15F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		BE1BDE9D1B3B96CD00C7E15F /* KMSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSectionHeaderView.h; sourceTree = "<group>"; };
 		BE1BDE9E1B3B96CD00C7E15F /* KMSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSectionHeaderView.m; sourceTree = "<group>"; };
 		BE1BDE9F1B3B96CD00C7E15F /* KMSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KMSectionHeaderView.xib; sourceTree = "<group>"; };
@@ -64,6 +65,8 @@
 		BE6F7E2F1B3C797500999A82 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		BE6F7E301B3C797500999A82 /* linkedin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedin.png; sourceTree = "<group>"; };
 		BE6F7E311B3C797500999A82 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		BE6F7E371B3C953400999A82 /* SectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionViewController.h; sourceTree = "<group>"; };
+		BE6F7E381B3C953400999A82 /* SectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				BE1BDE9B1B3B96CC00C7E15F /* Classes */,
-				BE1BDE981B3B96BE00C7E15F /* MyViewController.h */,
-				BE1BDE991B3B96BE00C7E15F /* MyViewController.m */,
+				BE1BDE981B3B96BE00C7E15F /* MainViewController.h */,
+				BE1BDE991B3B96BE00C7E15F /* MainViewController.m */,
+				BE6F7E371B3C953400999A82 /* SectionViewController.h */,
+				BE6F7E381B3C953400999A82 /* SectionViewController.m */,
 				BE1BDE761B3B965F00C7E15F /* AppDelegate.h */,
 				BE1BDE771B3B965F00C7E15F /* AppDelegate.m */,
 				BE6F7E2C1B3C797500999A82 /* Resource */,
@@ -304,12 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE1BDE9A1B3B96BE00C7E15F /* MyViewController.m in Sources */,
+				BE1BDE9A1B3B96BE00C7E15F /* MainViewController.m in Sources */,
 				BE1BDEA81B3B96CD00C7E15F /* KMSectionHeaderView.m in Sources */,
 				BE1BDEAC1B3B96CD00C7E15F /* KMAccordionTableViewController.m in Sources */,
 				BE1BDE781B3B965F00C7E15F /* AppDelegate.m in Sources */,
 				BE1BDEAB1B3B96CD00C7E15F /* KMSection.m in Sources */,
 				BE1BDE751B3B965F00C7E15F /* main.m in Sources */,
+				BE6F7E391B3C953400999A82 /* SectionViewController.m in Sources */,
 				BE1BDEAA1B3B96CD00C7E15F /* KMAppearence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -145,7 +145,7 @@ static bool oneSectionAlwaysOpen = NO;
 {
     if (self.sections.count > 0) {
         
-        NSMutableArray *cellToReloadArray;
+        NSMutableArray *cellToReloadArray = [NSMutableArray array];
         
         for (KMSection *section in self.sections) {
             [cellToReloadArray addObject:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:section.sectionIndex]]];
@@ -160,7 +160,7 @@ static bool oneSectionAlwaysOpen = NO;
 {
     if (indexes.count > 0) {
         
-        NSMutableArray *cellToReloadArray;
+        NSMutableArray *cellToReloadArray = [NSMutableArray array];
         
         for (NSNumber *index in indexes) {
             [cellToReloadArray addObject:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:[index intValue]]]];

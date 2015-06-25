@@ -8,6 +8,6 @@
 
 #import "KMAccordionTableViewController.h"
 
-@interface MyViewController : KMAccordionTableViewController
+@interface MainViewController : KMAccordionTableViewController
 
 @end

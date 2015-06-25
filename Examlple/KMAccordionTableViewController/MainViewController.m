@@ -6,13 +6,14 @@
 //
 //
 
-#import "MyViewController.h"
+#import "MainViewController.h"
+#import "SectionViewController.h"
 
-@interface MyViewController () <KMAccordionTableViewControllerDataSource,KMAccordionTableViewControllerDelegate>
+@interface MainViewController () <KMAccordionTableViewControllerDataSource,KMAccordionTableViewControllerDelegate, SectionViewControllerDelegate>
 
 @end
 
-@implementation MyViewController
+@implementation MainViewController
 
 - (NSInteger)numberOfSectionsInAccordionTableViewController:(KMAccordionTableViewController *)accordionTableView
 {
@@ -188,10 +189,14 @@
 
 - (KMSection *)sectionFour
 {
-    UIView *viewOfSection4 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
-    viewOfSection4.backgroundColor = [UIColor redColor];
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SectionViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"ViewControllerIdentifier"];
+    viewController.delegate = self;
+    [self addChildViewController:viewController];
+    
     KMSection *section4 = [[KMSection alloc] init];
-    section4.view = viewOfSection4;
+    section4.view = viewController.view;
     section4.title = @"Last Section";
     section4.backgroundColor = [UIColor yellowColor];
     
@@ -208,6 +213,16 @@
 - (void)accordionTableViewControllerSectionDidOpen:(KMSection *)section
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
+}
+
+#pragma mark - SectionViewControllerDelegate
+
+- (void)sectionViewControllerDidLayoutSubViews:(CGSize)size
+{
+    KMSection *section = self.sections[3];
+    section.view.frame = CGRectMake(0, 0, size.width, size.height);
+
+    [self reloadSectionsAtIndexes:@[@3]];
 }
 
 @end
