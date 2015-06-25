@@ -19,8 +19,11 @@
 		BE1BDEAA1B3B96CD00C7E15F /* KMAppearence.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDEA21B3B96CD00C7E15F /* KMAppearence.m */; };
 		BE1BDEAB1B3B96CD00C7E15F /* KMSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDEA41B3B96CD00C7E15F /* KMSection.m */; };
 		BE1BDEAC1B3B96CD00C7E15F /* KMAccordionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDEA71B3B96CD00C7E15F /* KMAccordionTableViewController.m */; };
-		BE1BDEAF1B3B978800C7E15F /* carat-open.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1BDEAD1B3B978800C7E15F /* carat-open.png */; };
-		BE1BDEB01B3B978800C7E15F /* carat.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1BDEAE1B3B978800C7E15F /* carat.png */; };
+		BE6F7E321B3C797500999A82 /* carat-open.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E2D1B3C797500999A82 /* carat-open.png */; };
+		BE6F7E331B3C797500999A82 /* carat.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E2E1B3C797500999A82 /* carat.png */; };
+		BE6F7E341B3C797500999A82 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E2F1B3C797500999A82 /* facebook.png */; };
+		BE6F7E351B3C797500999A82 /* linkedin.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E301B3C797500999A82 /* linkedin.png */; };
+		BE6F7E361B3C797500999A82 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E311B3C797500999A82 /* twitter.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +59,11 @@
 		BE1BDEA41B3B96CD00C7E15F /* KMSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSection.m; sourceTree = "<group>"; };
 		BE1BDEA61B3B96CD00C7E15F /* KMAccordionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMAccordionTableViewController.h; sourceTree = "<group>"; };
 		BE1BDEA71B3B96CD00C7E15F /* KMAccordionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewController.m; sourceTree = "<group>"; };
-		BE1BDEAD1B3B978800C7E15F /* carat-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carat-open.png"; sourceTree = "<group>"; };
-		BE1BDEAE1B3B978800C7E15F /* carat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carat.png; sourceTree = "<group>"; };
+		BE6F7E2D1B3C797500999A82 /* carat-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carat-open.png"; sourceTree = "<group>"; };
+		BE6F7E2E1B3C797500999A82 /* carat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carat.png; sourceTree = "<group>"; };
+		BE6F7E2F1B3C797500999A82 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		BE6F7E301B3C797500999A82 /* linkedin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedin.png; sourceTree = "<group>"; };
+		BE6F7E311B3C797500999A82 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				BE1BDE9B1B3B96CC00C7E15F /* Classes */,
-				BE1BDEAD1B3B978800C7E15F /* carat-open.png */,
-				BE1BDEAE1B3B978800C7E15F /* carat.png */,
 				BE1BDE981B3B96BE00C7E15F /* MyViewController.h */,
 				BE1BDE991B3B96BE00C7E15F /* MyViewController.m */,
 				BE1BDE761B3B965F00C7E15F /* AppDelegate.h */,
 				BE1BDE771B3B965F00C7E15F /* AppDelegate.m */,
+				BE6F7E2C1B3C797500999A82 /* Resource */,
 				BE1BDE7C1B3B965F00C7E15F /* Main.storyboard */,
 				BE1BDE7F1B3B965F00C7E15F /* Images.xcassets */,
 				BE1BDE811B3B965F00C7E15F /* LaunchScreen.xib */,
@@ -179,6 +184,18 @@
 				BE1BDEA71B3B96CD00C7E15F /* KMAccordionTableViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BE6F7E2C1B3C797500999A82 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BE6F7E2D1B3C797500999A82 /* carat-open.png */,
+				BE6F7E2E1B3C797500999A82 /* carat.png */,
+				BE6F7E2F1B3C797500999A82 /* facebook.png */,
+				BE6F7E301B3C797500999A82 /* linkedin.png */,
+				BE6F7E311B3C797500999A82 /* twitter.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,11 +279,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE1BDE7E1B3B965F00C7E15F /* Main.storyboard in Resources */,
-				BE1BDEB01B3B978800C7E15F /* carat.png in Resources */,
+				BE6F7E331B3C797500999A82 /* carat.png in Resources */,
+				BE6F7E361B3C797500999A82 /* twitter.png in Resources */,
 				BE1BDEA91B3B96CD00C7E15F /* KMSectionHeaderView.xib in Resources */,
 				BE1BDE831B3B965F00C7E15F /* LaunchScreen.xib in Resources */,
-				BE1BDEAF1B3B978800C7E15F /* carat-open.png in Resources */,
+				BE6F7E351B3C797500999A82 /* linkedin.png in Resources */,
+				BE6F7E321B3C797500999A82 /* carat-open.png in Resources */,
 				BE1BDE801B3B965F00C7E15F /* Images.xcassets in Resources */,
+				BE6F7E341B3C797500999A82 /* facebook.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

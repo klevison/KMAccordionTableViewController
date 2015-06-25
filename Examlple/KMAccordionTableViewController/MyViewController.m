@@ -31,20 +31,25 @@
     return section.view.frame.size.height;
 }
 
-- (UITableViewRowAnimation)accordionTableViewAnimation:(KMAccordionTableViewController *)accordionTableView
+- (UITableViewRowAnimation)accordionTableViewOpenAnimation:(KMAccordionTableViewController *)accordionTableView
 {
-    return UITableViewRowAnimationRight;
+    return UITableViewRowAnimationFade;
+}
+
+- (UITableViewRowAnimation)accordionTableViewCloseAnimation:(KMAccordionTableViewController *)accordionTableView
+{
+    return UITableViewRowAnimationFade;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [self setupAppearence];
+    
     self.dataSource = self;
     self.delegate = self;
     
     self.sections = [self getSectionArray];
-    [self setupAppearence];
 }
 
 - (void)setupAppearence
@@ -59,68 +64,138 @@
     [self setOneSectionAlwaysOpen:NO]; // set if one section should always be open. if set to YES, the VC will load with the first section already open, and the open section will not close unless you click a different section
 }
 
-- (void)teste
+- (void)updateSectionOne
 {
-    KMSection *section = self.sections[2];
-
+    KMSection *section = self.sections[0];
     UIView *view = section.view;
-    view.frame = CGRectMake(0, 0, 320, 400);
+    view.frame = CGRectMake(0, 0, self.view.frame.size.width, 400);
     [self reloadOpenedSection];
+}
+
+- (void)updateAllSections
+{
+    KMSection *section1 = self.sections[0];
+    UIView *view1 = section1.view;
+    view1.frame = CGRectMake(0, 0, self.view.frame.size.width, 50);
+    
+    KMSection *section2 = self.sections[1];
+    UIView *view2 = section2.view;
+    view2.frame = CGRectMake(0, 0, self.view.frame.size.width, 50);
+    
+    KMSection *section3 = self.sections[2];
+    UIView *view3 = section3.view;
+    view3.frame = CGRectMake(0, 0, self.view.frame.size.width, 50);
+    
+    KMSection *section4 = self.sections[3];
+    UIView *view4 = section4.view;
+    view4.frame = CGRectMake(0, 0, self.view.frame.size.width, 50);
+    
+    [self reloadSectionsAtIndexes:@[@1,@2,@3,@4]];
+    
+    [self reloadAllSections];
+}
+
+- (void)updateSectionsOneAndTwo
+{
+    KMSection *section1 = self.sections[0];
+    UIView *view1 = section1.view;
+    view1.frame = CGRectMake(0, 0, self.view.frame.size.width, 100);
+    
+    KMSection *section2 = self.sections[1];
+    UIView *view2 = section2.view;
+    view2.frame = CGRectMake(0, 0, self.view.frame.size.width, 100);
+    
+    [self reloadSectionsAtIndexes:@[@1,@2]];
 }
 
 - (NSArray *)getSectionArray
 {
-    UIView *viewOfSection1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 300)];
-    viewOfSection1.backgroundColor = [UIColor grayColor];
-    KMSection *section1 = [[KMSection alloc] init];
-    section1.view = viewOfSection1;
-    section1.title = @"My First Section";
-    section1.colorForBackground = [UIColor redColor]; // individual background color for a specific section, overrides the general color if set
-    section1.image = [UIImage imageNamed:@"facebook_email"];
-//
-////    UIView *minhaview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
-////    minhaview.backgroundColor = [UIColor redColor];
-////    section1.overHeaderView = minhaview;
+    KMSection *section1 = [self sectionOne];
+    KMSection *section2 = [self sectionTwo];
+    KMSection *section3 = [self sectionThree];
+    KMSection *section4 = [self sectionFour];
 
-    UIView *viewOfSection2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 300)];
+    return @[section1, section2, section3, section4];
+}
+
+#pragma mark - Setup Sections
+
+- (KMSection *)sectionOne
+{
+    UIView *viewOfSection1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
+    viewOfSection1.backgroundColor = [UIColor grayColor];
+    KMSection *section1 = [KMSection new];
+    section1.view = viewOfSection1;
+    section1.title = @"Facebook";
+    section1.backgroundColor = [UIColor redColor]; // individual background color for a specific section, overrides the general color if set
+    
+    UIImageView *overlayViewSection1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, [self headerHeight] - 1)];
+    overlayViewSection1.backgroundColor = [UIColor whiteColor];
+    overlayViewSection1.image = [UIImage imageNamed:@"facebook"];
+    overlayViewSection1.contentMode = UIViewContentModeCenter;
+    overlayViewSection1.backgroundColor = [UIColor clearColor];
+    section1.overlayView = overlayViewSection1;
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    [button setTitle:@"Reload only this section" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(updateSectionOne) forControlEvents:UIControlEventTouchUpInside];
+    [viewOfSection1 addSubview:button];
+    
+    return section1;
+}
+
+- (KMSection *)sectionTwo
+{
+    UIView *viewOfSection2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
     viewOfSection2.backgroundColor = [UIColor redColor];
     KMSection *section2 = [[KMSection alloc] init];
     section2.view = viewOfSection2;
-    section2.title = @"Sec. Section";
-    section2.colorForBackground = [UIColor orangeColor];
-    section2.image = [UIImage imageNamed:@"linkdin_Email"];
+    section2.title = @"Twitter";
+    section2.backgroundColor = [UIColor orangeColor];
+    
+    UIImageView *overlayViewSection2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, [self headerHeight] - 1)];
+    overlayViewSection2.backgroundColor = [UIColor blueColor];
+    overlayViewSection2.image = [UIImage imageNamed:@"twitter"];
+    overlayViewSection2.contentMode = UIViewContentModeCenter;
+    overlayViewSection2.backgroundColor = [UIColor clearColor];
+    section2.overlayView = overlayViewSection2;
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    [button setTitle:@"Reload sections one and two" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(updateSectionsOneAndTwo) forControlEvents:UIControlEventTouchUpInside];
+    [viewOfSection2 addSubview:button];
+    
+    return section2;
+}
 
-    UIView *viewOfSection3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+- (KMSection *)sectionThree
+{
+    UIView *viewOfSection3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     viewOfSection3.backgroundColor = [UIColor greenColor];
-
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-    [button setTitle:@"click meeeeeee" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(teste) forControlEvents:UIControlEventTouchUpInside];
-    [viewOfSection3 addSubview:button];
-
+    
     KMSection *section3 = [[KMSection alloc] init];
     section3.view = viewOfSection3;
-    section3.title = @"thirddddd";
-    section3.colorForBackground = [UIColor blueColor];
-    section3.image = [UIImage imageNamed:@"Skype_Email"];
+    section3.title = @"Reload All Section";
+    section3.backgroundColor = [UIColor blueColor];
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    [button setTitle:@"Reload all sections" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(updateAllSections) forControlEvents:UIControlEventTouchUpInside];
+    [viewOfSection3 addSubview:button];
+    
+    return section3;
+}
 
-    UIView *viewOfSection5 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 300)];
-    viewOfSection5.backgroundColor = [UIColor redColor];
-    KMSection *section5 = [[KMSection alloc] init];
-    section5.view = viewOfSection5;
-    section5.title = @"Sec. Section";
-    section5.colorForBackground = [UIColor yellowColor];
-    section5.image = [UIImage imageNamed:@"facebook_email"];
-
-    UIView *viewOfSection6 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 700)];
-    viewOfSection6.backgroundColor = [UIColor greenColor];
-    KMSection *section6 = [[KMSection alloc] init];
-    section6.view = viewOfSection6;
-    section6.title = @"thirddddd";
-    section6.colorForBackground = [UIColor purpleColor];
-    section6.image = [UIImage imageNamed:@"Skype_Email"];
-
-    return @[section1, section2, section3, section5, section6];
+- (KMSection *)sectionFour
+{
+    UIView *viewOfSection4 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
+    viewOfSection4.backgroundColor = [UIColor redColor];
+    KMSection *section4 = [[KMSection alloc] init];
+    section4.view = viewOfSection4;
+    section4.title = @"Last Section";
+    section4.backgroundColor = [UIColor yellowColor];
+    
+    return section4;
 }
 
 #pragma mark - KMAccordionTableViewControllerDelegate
@@ -131,11 +206,6 @@
 }
 
 - (void)accordionTableViewControllerSectionDidOpen:(KMSection *)section
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-}
-
-- (void)accordionTableViewControllerSectionDidChangeOpen:(KMSection *)section
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
 }

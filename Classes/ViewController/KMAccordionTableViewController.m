@@ -12,7 +12,8 @@
 @interface KMAccordionTableViewController () <KMSectionHeaderViewDelegate>
 
 @property (nonatomic) NSInteger openSectionIndex;
-@property UITableViewRowAnimation animation;
+@property UITableViewRowAnimation closeAnimation;
+@property UITableViewRowAnimation openAnimation;
 
 @end
 
@@ -45,7 +46,8 @@ static bool oneSectionAlwaysOpen = NO;
 - (void)setup
 {
     self.sectionAppearence = [KMAppearence new];
-    self.animation = UITableViewRowAnimationFade;
+    self.openAnimation = UITableViewRowAnimationFade;
+    self.closeAnimation = UITableViewRowAnimationFade;
     self.openSectionIndex = NSNotFound;
 }
 
@@ -57,9 +59,14 @@ static bool oneSectionAlwaysOpen = NO;
 
 #pragma mark - Appearence Methods
 
-- (void)setHeaderHeight:(float)height
+- (void)setHeaderHeight:(CGFloat)height
 {
     [self.sectionAppearence setHeaderHeight:height];
+}
+
+- (CGFloat)headerHeight
+{
+    return [self.sectionAppearence headerHeight];
 }
 
 - (void)setHeaderFont:(UIFont *)headerFont
@@ -128,8 +135,40 @@ static bool oneSectionAlwaysOpen = NO;
 - (void)reloadOpenedSection
 {
     KMSection *openedSection = [self getOpenedSection];
-    NSArray *cellToReloadArray = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:openedSection.sectionIndex]];
-    [self.tableView reloadRowsAtIndexPaths:cellToReloadArray withRowAnimation:UITableViewRowAnimationNone];
+    if (openedSection) {
+        NSArray *cellToReloadArray = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:openedSection.sectionIndex]];
+        [self.tableView reloadRowsAtIndexPaths:cellToReloadArray withRowAnimation:self.openAnimation];
+    }
+}
+
+- (void)reloadAllSections
+{
+    if (self.sections.count > 0) {
+        
+        NSMutableArray *cellToReloadArray;
+        
+        for (KMSection *section in self.sections) {
+            [cellToReloadArray addObject:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:section.sectionIndex]]];
+        }
+        
+        [self.tableView reloadRowsAtIndexPaths:cellToReloadArray withRowAnimation:self.openAnimation];
+        
+    }
+}
+
+- (void)reloadSectionsAtIndexes:(NSArray *)indexes
+{
+    if (indexes.count > 0) {
+        
+        NSMutableArray *cellToReloadArray;
+        
+        for (NSNumber *index in indexes) {
+            [cellToReloadArray addObject:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:[index intValue]]]];
+        }
+        
+        [self.tableView reloadRowsAtIndexPaths:cellToReloadArray withRowAnimation:self.openAnimation];
+        
+    }
 }
 
 #pragma mark - Table view data source
@@ -189,20 +228,19 @@ static bool oneSectionAlwaysOpen = NO;
     currentSection.headerView = sectionHeaderView;
 
     sectionHeaderView.titleLabel.text = currentSection.title;
-    [sectionHeaderView.imageView setImage:currentSection.image];
     [sectionHeaderView setSection:sectionIndex];
     [sectionHeaderView setDelegate:self];
     
     UIColor *tempcolor = self.sectionAppearence.headerColor;
-    if (currentSection.colorForBackground) {
-        [self.sectionAppearence setHeaderColor:currentSection.colorForBackground];
+    if (currentSection.backgroundColor) {
+        [self.sectionAppearence setHeaderColor:currentSection.backgroundColor];
     }
     
     [sectionHeaderView setHeaderSectionAppearence:self.sectionAppearence];
     [self.sectionAppearence setHeaderColor:tempcolor];
     
-    if (currentSection.overHeaderView) {
-        [sectionHeaderView addOverHeaderSubView:currentSection.overHeaderView];
+    if (currentSection.overlayView) {
+        [sectionHeaderView addOverHeaderSubView:currentSection.overlayView];
     }
 
     [self configureSectionsCell:currentSection];
@@ -220,8 +258,12 @@ static bool oneSectionAlwaysOpen = NO;
     
     KMSection *section = (self.sections)[sectionOpened];
     
-    if ([self.dataSource respondsToSelector:@selector(accordionTableViewAnimation:)]) {
-        self.animation = [self.dataSource accordionTableViewAnimation:self];
+    if ([self.dataSource respondsToSelector:@selector(accordionTableViewOpenAnimation:)]) {
+        self.openAnimation = [self.dataSource accordionTableViewOpenAnimation:self];
+    }
+    
+    if ([self.dataSource respondsToSelector:@selector(accordionTableViewCloseAnimation:)]) {
+        self.closeAnimation = [self.dataSource accordionTableViewCloseAnimation:self];
     }
     
     if (!section.open) {
@@ -257,8 +299,8 @@ static bool oneSectionAlwaysOpen = NO;
     }
     
     [self.tableView beginUpdates];
-    [self.tableView insertRowsAtIndexPaths:indexPathsToInsert withRowAnimation:self.animation];
-    [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:self.animation];
+    [self.tableView insertRowsAtIndexPaths:indexPathsToInsert withRowAnimation:self.openAnimation];
+    [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:self.closeAnimation];
     [self.tableView endUpdates];
     
     CGRect sectionRect = [self.tableView rectForSection:sectionOpened];
@@ -282,7 +324,7 @@ static bool oneSectionAlwaysOpen = NO;
     if (countOfRowsToDelete > 0) {
         NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
         [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:0 inSection:sectionClosed]];
-        [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:self.animation];
+        [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:self.closeAnimation];
     }
     
     self.openSectionIndex = NSNotFound;

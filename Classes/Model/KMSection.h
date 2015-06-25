@@ -14,11 +14,10 @@
 
 @property(getter = isOpen) BOOL open;
 @property UIView *view;
-@property UIView *overHeaderView;
+@property UIView *overlayView;
 @property KMSectionHeaderView *headerView;
 @property(nonatomic, copy) NSString *title;
-@property(nonatomic, copy) UIImage *image;
-@property(nonatomic, copy) UIColor *colorForBackground;
+@property(nonatomic, copy) UIColor *backgroundColor;
 @property NSInteger sectionIndex;
 
 @end

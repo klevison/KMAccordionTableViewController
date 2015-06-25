@@ -6,7 +6,7 @@
 
 @interface KMAppearence : NSObject
 
-@property(nonatomic, assign) NSInteger headerHeight;
+@property(nonatomic, assign) CGFloat headerHeight;
 @property(nonatomic, strong) UIFont *headerFont;
 @property(nonatomic, strong) UIColor *headerTitleColor;
 @property(nonatomic, strong) UIColor *headerColor;

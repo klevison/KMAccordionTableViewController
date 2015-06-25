@@ -36,7 +36,9 @@
 
 @optional
 
-- (UITableViewRowAnimation)accordionTableViewAnimation:(KMAccordionTableViewController *)accordionTableView;
+- (UITableViewRowAnimation)accordionTableViewOpenAnimation:(KMAccordionTableViewController *)accordionTableView;
+
+- (UITableViewRowAnimation)accordionTableViewCloseAnimation:(KMAccordionTableViewController *)accordionTableView;
 
 @end
 
@@ -47,6 +49,10 @@
  Updates the opened section.
  */
 - (void)reloadOpenedSection;
+
+- (void)reloadAllSections;
+
+- (void)reloadSectionsAtIndexes:(NSArray *)indexes;
 
 /**
  Sets AccordionTableView's delegate.
@@ -67,7 +73,12 @@
 /**
  Sets section header height.
  */
-- (void)setHeaderHeight:(float)height;
+- (void)setHeaderHeight:(CGFloat)height;
+
+/**
+ Get section header height.
+ */
+- (CGFloat)headerHeight;
 
 /**
  Sets section header font.
