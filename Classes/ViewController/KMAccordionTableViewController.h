@@ -63,9 +63,13 @@
 /**
  Sets section's view.
  */
-@property(nonatomic, strong) NSArray *sections;
 @property(nonatomic, strong) KMAppearence *sectionAppearence;
 @property (nonatomic) NSInteger openedSectionIndex;
+
+/**
+ Sets section at index.
+ */
+- (id)sectionAtIndex:(NSInteger)index;
 
 /**
  Sets section header height.

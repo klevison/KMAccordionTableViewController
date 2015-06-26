@@ -13,6 +13,7 @@
 
 @property UITableViewRowAnimation closeAnimation;
 @property UITableViewRowAnimation openAnimation;
+@property(nonatomic, strong) NSArray *sections;
 
 @end
 
@@ -104,6 +105,15 @@ static bool oneSectionAlwaysOpen = NO;
 }
 
 #pragma mark - Class Methods
+
+- (id)sectionAtIndex:(NSInteger)index
+{
+    if (self.sections.count >= index + 1) {
+        return self.sections[index];
+    }
+    
+    return nil;
+}
 
 - (void)setupTableView
 {
