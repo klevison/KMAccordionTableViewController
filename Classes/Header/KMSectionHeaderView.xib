@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
@@ -23,9 +22,9 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmV-0D-x5a">
-                    <rect key="frame" x="280" y="0.0" width="30" height="47"/>
+                    <rect key="frame" x="280" y="0.0" width="40" height="48"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="l6o-lN-UGf"/>
+                        <constraint firstAttribute="width" constant="40" id="sHm-xX-d5U"/>
                     </constraints>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,21 +50,21 @@
             </subviews>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="cbG-Fq-5Ap" secondAttribute="centerY" id="2PY-oG-G1O"/>
+                <constraint firstAttribute="trailing" secondItem="mmV-0D-x5a" secondAttribute="trailing" id="7mx-1K-FWP"/>
                 <constraint firstItem="Uju-4A-bTW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="C0z-UD-usK"/>
                 <constraint firstAttribute="trailing" secondItem="Wkr-Fq-D4M" secondAttribute="trailing" id="FrP-FP-ghv"/>
                 <constraint firstAttribute="bottom" secondItem="WJA-Jn-ogR" secondAttribute="bottom" id="Fwi-NX-y27"/>
                 <constraint firstItem="Wkr-Fq-D4M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="H9n-R4-RXf"/>
                 <constraint firstAttribute="bottom" secondItem="Wkr-Fq-D4M" secondAttribute="bottom" id="KyF-uG-6Qa"/>
                 <constraint firstAttribute="bottom" secondItem="Uju-4A-bTW" secondAttribute="bottom" id="PDh-WA-jkn"/>
+                <constraint firstAttribute="bottom" secondItem="mmV-0D-x5a" secondAttribute="bottom" id="Wac-Gs-t4l"/>
                 <constraint firstAttribute="centerX" secondItem="cbG-Fq-5Ap" secondAttribute="centerX" id="Zxl-7a-r9r"/>
                 <constraint firstAttribute="trailing" secondItem="Uju-4A-bTW" secondAttribute="trailing" id="aax-J1-xMf"/>
-                <constraint firstItem="mmV-0D-x5a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="c2y-XX-vI2"/>
+                <constraint firstItem="mmV-0D-x5a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dUh-di-v4p"/>
                 <constraint firstItem="Uju-4A-bTW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fQS-AC-Zyj"/>
-                <constraint firstItem="WJA-Jn-ogR" firstAttribute="top" secondItem="mmV-0D-x5a" secondAttribute="bottom" id="fte-bx-jCv"/>
                 <constraint firstItem="WJA-Jn-ogR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="y1x-Gh-FC2"/>
                 <constraint firstAttribute="trailing" secondItem="WJA-Jn-ogR" secondAttribute="trailing" id="yBg-c5-Nt5"/>
                 <constraint firstItem="Wkr-Fq-D4M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yVy-Hr-TRb"/>
-                <constraint firstAttribute="trailing" secondItem="mmV-0D-x5a" secondAttribute="trailing" constant="10" id="zgy-Ya-Ajw"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
