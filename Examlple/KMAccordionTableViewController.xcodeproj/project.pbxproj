@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE1BDE751B3B965F00C7E15F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDE741B3B965F00C7E15F /* main.m */; };
+		BE1BDE781B3B965F00C7E15F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDE771B3B965F00C7E15F /* AppDelegate.m */; };
+		BE1BDE7E1B3B965F00C7E15F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1BDE7C1B3B965F00C7E15F /* Main.storyboard */; };
+		BE1BDE801B3B965F00C7E15F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1BDE7F1B3B965F00C7E15F /* Images.xcassets */; };
+		BE1BDE831B3B965F00C7E15F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1BDE811B3B965F00C7E15F /* LaunchScreen.xib */; };
+		BE1BDE8F1B3B966000C7E15F /* KMAccordionTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDE8E1B3B966000C7E15F /* KMAccordionTableViewControllerTests.m */; };
+		BE1BDE9A1B3B96BE00C7E15F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDE991B3B96BE00C7E15F /* MainViewController.m */; };
+		BE1BDEA81B3B96CD00C7E15F /* KMSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDE9E1B3B96CD00C7E15F /* KMSectionHeaderView.m */; };
+		BE1BDEA91B3B96CD00C7E15F /* KMSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1BDE9F1B3B96CD00C7E15F /* KMSectionHeaderView.xib */; };
+		BE1BDEAA1B3B96CD00C7E15F /* KMAppearence.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDEA21B3B96CD00C7E15F /* KMAppearence.m */; };
+		BE1BDEAB1B3B96CD00C7E15F /* KMSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDEA41B3B96CD00C7E15F /* KMSection.m */; };
+		BE1BDEAC1B3B96CD00C7E15F /* KMAccordionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1BDEA71B3B96CD00C7E15F /* KMAccordionTableViewController.m */; };
+		BE6F7E321B3C797500999A82 /* carat-open.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E2D1B3C797500999A82 /* carat-open.png */; };
+		BE6F7E331B3C797500999A82 /* carat.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E2E1B3C797500999A82 /* carat.png */; };
+		BE6F7E341B3C797500999A82 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E2F1B3C797500999A82 /* facebook.png */; };
+		BE6F7E351B3C797500999A82 /* linkedin.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E301B3C797500999A82 /* linkedin.png */; };
+		BE6F7E361B3C797500999A82 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = BE6F7E311B3C797500999A82 /* twitter.png */; };
+		BE6F7E391B3C953400999A82 /* SectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6F7E381B3C953400999A82 /* SectionViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE1BDE891B3B966000C7E15F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE1BDE671B3B965F00C7E15F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE1BDE6E1B3B965F00C7E15F;
+			remoteInfo = KMAccordionTableViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE1BDE6F1B3B965F00C7E15F /* KMAccordionTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMAccordionTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1BDE731B3B965F00C7E15F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE1BDE741B3B965F00C7E15F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE1BDE761B3B965F00C7E15F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BE1BDE771B3B965F00C7E15F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE1BDE7D1B3B965F00C7E15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE1BDE7F1B3B965F00C7E15F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE1BDE821B3B965F00C7E15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BE1BDE881B3B966000C7E15F /* KMAccordionTableViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMAccordionTableViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1BDE8D1B3B966000C7E15F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE1BDE8E1B3B966000C7E15F /* KMAccordionTableViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewControllerTests.m; sourceTree = "<group>"; };
+		BE1BDE981B3B96BE00C7E15F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		BE1BDE991B3B96BE00C7E15F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		BE1BDE9D1B3B96CD00C7E15F /* KMSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSectionHeaderView.h; sourceTree = "<group>"; };
+		BE1BDE9E1B3B96CD00C7E15F /* KMSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSectionHeaderView.m; sourceTree = "<group>"; };
+		BE1BDE9F1B3B96CD00C7E15F /* KMSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KMSectionHeaderView.xib; sourceTree = "<group>"; };
+		BE1BDEA11B3B96CD00C7E15F /* KMAppearence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMAppearence.h; sourceTree = "<group>"; };
+		BE1BDEA21B3B96CD00C7E15F /* KMAppearence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMAppearence.m; sourceTree = "<group>"; };
+		BE1BDEA31B3B96CD00C7E15F /* KMSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSection.h; sourceTree = "<group>"; };
+		BE1BDEA41B3B96CD00C7E15F /* KMSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSection.m; sourceTree = "<group>"; };
+		BE1BDEA61B3B96CD00C7E15F /* KMAccordionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMAccordionTableViewController.h; sourceTree = "<group>"; };
+		BE1BDEA71B3B96CD00C7E15F /* KMAccordionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewController.m; sourceTree = "<group>"; };
+		BE6F7E2D1B3C797500999A82 /* carat-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carat-open.png"; sourceTree = "<group>"; };
+		BE6F7E2E1B3C797500999A82 /* carat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carat.png; sourceTree = "<group>"; };
+		BE6F7E2F1B3C797500999A82 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		BE6F7E301B3C797500999A82 /* linkedin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedin.png; sourceTree = "<group>"; };
+		BE6F7E311B3C797500999A82 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		BE6F7E371B3C953400999A82 /* SectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionViewController.h; sourceTree = "<group>"; };
+		BE6F7E381B3C953400999A82 /* SectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE1BDE6C1B3B965F00C7E15F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE1BDE851B3B966000C7E15F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE1BDE661B3B965F00C7E15F = {
+			isa = PBXGroup;
+			children = (
+				BE1BDE711B3B965F00C7E15F /* KMAccordionTableViewController */,
+				BE1BDE8B1B3B966000C7E15F /* KMAccordionTableViewControllerTests */,
+				BE1BDE701B3B965F00C7E15F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE1BDE701B3B965F00C7E15F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BDE6F1B3B965F00C7E15F /* KMAccordionTableViewController.app */,
+				BE1BDE881B3B966000C7E15F /* KMAccordionTableViewControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE1BDE711B3B965F00C7E15F /* KMAccordionTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BDE9B1B3B96CC00C7E15F /* Classes */,
+				BE1BDE981B3B96BE00C7E15F /* MainViewController.h */,
+				BE1BDE991B3B96BE00C7E15F /* MainViewController.m */,
+				BE6F7E371B3C953400999A82 /* SectionViewController.h */,
+				BE6F7E381B3C953400999A82 /* SectionViewController.m */,
+				BE1BDE761B3B965F00C7E15F /* AppDelegate.h */,
+				BE1BDE771B3B965F00C7E15F /* AppDelegate.m */,
+				BE6F7E2C1B3C797500999A82 /* Resource */,
+				BE1BDE7C1B3B965F00C7E15F /* Main.storyboard */,
+				BE1BDE7F1B3B965F00C7E15F /* Images.xcassets */,
+				BE1BDE811B3B965F00C7E15F /* LaunchScreen.xib */,
+				BE1BDE721B3B965F00C7E15F /* Supporting Files */,
+			);
+			path = KMAccordionTableViewController;
+			sourceTree = "<group>";
+		};
+		BE1BDE721B3B965F00C7E15F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BDE731B3B965F00C7E15F /* Info.plist */,
+				BE1BDE741B3B965F00C7E15F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE1BDE8B1B3B966000C7E15F /* KMAccordionTableViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BDE8E1B3B966000C7E15F /* KMAccordionTableViewControllerTests.m */,
+				BE1BDE8C1B3B966000C7E15F /* Supporting Files */,
+			);
+			path = KMAccordionTableViewControllerTests;
+			sourceTree = "<group>";
+		};
+		BE1BDE8C1B3B966000C7E15F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BDE8D1B3B966000C7E15F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE1BDE9B1B3B96CC00C7E15F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BDE9C1B3B96CC00C7E15F /* Header */,
+				BE1BDEA01B3B96CD00C7E15F /* Model */,
+				BE1BDEA51B3B96CD00C7E15F /* ViewController */,
+			);
+			name = Classes;
+			path = ../../Classes;
+			sourceTree = "<group>";
+		};
+		BE1BDE9C1B3B96CC00C7E15F /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BDE9D1B3B96CD00C7E15F /* KMSectionHeaderView.h */,
+				BE1BDE9E1B3B96CD00C7E15F /* KMSectionHeaderView.m */,
+				BE1BDE9F1B3B96CD00C7E15F /* KMSectionHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		BE1BDEA01B3B96CD00C7E15F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BDEA11B3B96CD00C7E15F /* KMAppearence.h */,
+				BE1BDEA21B3B96CD00C7E15F /* KMAppearence.m */,
+				BE1BDEA31B3B96CD00C7E15F /* KMSection.h */,
+				BE1BDEA41B3B96CD00C7E15F /* KMSection.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1BDEA51B3B96CD00C7E15F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BDEA61B3B96CD00C7E15F /* KMAccordionTableViewController.h */,
+				BE1BDEA71B3B96CD00C7E15F /* KMAccordionTableViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BE6F7E2C1B3C797500999A82 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BE6F7E2D1B3C797500999A82 /* carat-open.png */,
+				BE6F7E2E1B3C797500999A82 /* carat.png */,
+				BE6F7E2F1B3C797500999A82 /* facebook.png */,
+				BE6F7E301B3C797500999A82 /* linkedin.png */,
+				BE6F7E311B3C797500999A82 /* twitter.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE1BDE6E1B3B965F00C7E15F /* KMAccordionTableViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE1BDE921B3B966000C7E15F /* Build configuration list for PBXNativeTarget "KMAccordionTableViewController" */;
+			buildPhases = (
+				BE1BDE6B1B3B965F00C7E15F /* Sources */,
+				BE1BDE6C1B3B965F00C7E15F /* Frameworks */,
+				BE1BDE6D1B3B965F00C7E15F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMAccordionTableViewController;
+			productName = KMAccordionTableViewController;
+			productReference = BE1BDE6F1B3B965F00C7E15F /* KMAccordionTableViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE1BDE871B3B966000C7E15F /* KMAccordionTableViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE1BDE951B3B966000C7E15F /* Build configuration list for PBXNativeTarget "KMAccordionTableViewControllerTests" */;
+			buildPhases = (
+				BE1BDE841B3B966000C7E15F /* Sources */,
+				BE1BDE851B3B966000C7E15F /* Frameworks */,
+				BE1BDE861B3B966000C7E15F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE1BDE8A1B3B966000C7E15F /* PBXTargetDependency */,
+			);
+			name = KMAccordionTableViewControllerTests;
+			productName = KMAccordionTableViewControllerTests;
+			productReference = BE1BDE881B3B966000C7E15F /* KMAccordionTableViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE1BDE671B3B965F00C7E15F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = KM;
+				TargetAttributes = {
+					BE1BDE6E1B3B965F00C7E15F = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					BE1BDE871B3B966000C7E15F = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = BE1BDE6E1B3B965F00C7E15F;
+					};
+				};
+			};
+			buildConfigurationList = BE1BDE6A1B3B965F00C7E15F /* Build configuration list for PBXProject "KMAccordionTableViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE1BDE661B3B965F00C7E15F;
+			productRefGroup = BE1BDE701B3B965F00C7E15F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE1BDE6E1B3B965F00C7E15F /* KMAccordionTableViewController */,
+				BE1BDE871B3B966000C7E15F /* KMAccordionTableViewControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE1BDE6D1B3B965F00C7E15F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE1BDE7E1B3B965F00C7E15F /* Main.storyboard in Resources */,
+				BE6F7E331B3C797500999A82 /* carat.png in Resources */,
+				BE6F7E361B3C797500999A82 /* twitter.png in Resources */,
+				BE1BDEA91B3B96CD00C7E15F /* KMSectionHeaderView.xib in Resources */,
+				BE1BDE831B3B965F00C7E15F /* LaunchScreen.xib in Resources */,
+				BE6F7E351B3C797500999A82 /* linkedin.png in Resources */,
+				BE6F7E321B3C797500999A82 /* carat-open.png in Resources */,
+				BE1BDE801B3B965F00C7E15F /* Images.xcassets in Resources */,
+				BE6F7E341B3C797500999A82 /* facebook.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE1BDE861B3B966000C7E15F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE1BDE6B1B3B965F00C7E15F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE1BDE9A1B3B96BE00C7E15F /* MainViewController.m in Sources */,
+				BE1BDEA81B3B96CD00C7E15F /* KMSectionHeaderView.m in Sources */,
+				BE1BDEAC1B3B96CD00C7E15F /* KMAccordionTableViewController.m in Sources */,
+				BE1BDE781B3B965F00C7E15F /* AppDelegate.m in Sources */,
+				BE1BDEAB1B3B96CD00C7E15F /* KMSection.m in Sources */,
+				BE1BDE751B3B965F00C7E15F /* main.m in Sources */,
+				BE6F7E391B3C953400999A82 /* SectionViewController.m in Sources */,
+				BE1BDEAA1B3B96CD00C7E15F /* KMAppearence.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE1BDE841B3B966000C7E15F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE1BDE8F1B3B966000C7E15F /* KMAccordionTableViewControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE1BDE8A1B3B966000C7E15F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE1BDE6E1B3B965F00C7E15F /* KMAccordionTableViewController */;
+			targetProxy = BE1BDE891B3B966000C7E15F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE1BDE7C1B3B965F00C7E15F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE1BDE7D1B3B965F00C7E15F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE1BDE811B3B965F00C7E15F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE1BDE821B3B965F00C7E15F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE1BDE901B3B966000C7E15F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BE1BDE911B3B966000C7E15F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE1BDE931B3B966000C7E15F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KMAccordionTableViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BE1BDE941B3B966000C7E15F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KMAccordionTableViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BE1BDE961B3B966000C7E15F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KMAccordionTableViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMAccordionTableViewController.app/KMAccordionTableViewController";
+			};
+			name = Debug;
+		};
+		BE1BDE971B3B966000C7E15F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KMAccordionTableViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMAccordionTableViewController.app/KMAccordionTableViewController";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE1BDE6A1B3B965F00C7E15F /* Build configuration list for PBXProject "KMAccordionTableViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE1BDE901B3B966000C7E15F /* Debug */,
+				BE1BDE911B3B966000C7E15F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE1BDE921B3B966000C7E15F /* Build configuration list for PBXNativeTarget "KMAccordionTableViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE1BDE931B3B966000C7E15F /* Debug */,
+				BE1BDE941B3B966000C7E15F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE1BDE951B3B966000C7E15F /* Build configuration list for PBXNativeTarget "KMAccordionTableViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE1BDE961B3B966000C7E15F /* Debug */,
+				BE1BDE971B3B966000C7E15F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE1BDE671B3B965F00C7E15F /* Project object */;
+}

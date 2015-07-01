@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Icy-Bq-Sob">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--KMAccordionTableViewController-->
+        <scene sceneID="VYo-sf-ntB">
+            <objects>
+                <tableViewController id="nS0-hy-g18" customClass="MainViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Clp-KW-vau">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="nS0-hy-g18" id="N7W-dT-L4f"/>
+                            <outlet property="delegate" destination="nS0-hy-g18" id="QrK-3A-cEx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="KMAccordionTableViewController" id="a71-IL-LXC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRQ-Lx-iEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213" y="128"/>
+        </scene>
+        <!--Section View Controller-->
+        <scene sceneID="rmK-fN-oU2">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerIdentifier" id="Tpj-kv-mky" customClass="SectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0dS-aS-fsh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ctf-X0-KH0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BEm-1C-JQZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi I'm a ViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rot-61-60J">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92941176469999998" green="0.72941176470000002" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2085216641" green="0.21254143119999999" blue="0.2426013947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rot-61-60J" secondAttribute="trailing" id="A3A-Tv-29g"/>
+                            <constraint firstItem="rot-61-60J" firstAttribute="leading" secondItem="BEm-1C-JQZ" secondAttribute="leading" id="kKh-G3-tAa"/>
+                            <constraint firstItem="ctf-X0-KH0" firstAttribute="top" secondItem="rot-61-60J" secondAttribute="bottom" id="lqU-yE-gGo"/>
+                            <constraint firstItem="rot-61-60J" firstAttribute="top" secondItem="BEm-1C-JQZ" secondAttribute="topMargin" id="zP0-bz-SUY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klB-Dx-D8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eVQ-oL-Fye">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Icy-Bq-Sob" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iae-Ma-H0V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nS0-hy-g18" kind="relationship" relationship="rootViewController" id="VnG-IM-Vp1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ciG-3Y-ixd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="401" y="128"/>
+        </scene>
+    </scenes>
+</document>
