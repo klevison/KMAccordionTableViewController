@@ -2,7 +2,7 @@
 
 Accordion UITableViewController component based on Apples's example.
 
-Swift version: https://github.com/klevison/KMAccordionTableViewController 
+Swift version: https://github.com/klevison/AccordionTableViewController 
 
 <p align="center">
   <img align="center" src="juLug4JLzx.gif" alt="...">
