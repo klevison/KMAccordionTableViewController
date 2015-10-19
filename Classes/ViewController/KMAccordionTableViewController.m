@@ -117,7 +117,9 @@ static bool oneSectionAlwaysOpen = NO;
 
 - (void)setupTableView
 {
-    UINib *sectionHeaderNib = [UINib nibWithNibName:NSStringFromClass([KMSectionHeaderView class]) bundle:nil];
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"KMAccordionTableViewController" ofType:@"bundle"];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    UINib *sectionHeaderNib = [UINib nibWithNibName:NSStringFromClass([KMSectionHeaderView class]) bundle:bundle];
     [self.tableView registerNib:sectionHeaderNib forHeaderFooterViewReuseIdentifier:SectionHeaderViewIdentifier];
     [self.tableView setBounces:NO];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
