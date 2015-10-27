@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "KMAccordionTableViewController"
-  s.version          = "0.2"
+  s.version          = "0.2.1"
   s.summary          = "Accordion UITableViewController"
   s.description      = <<-DESC
                        Accordion UITableViewController component based on Apples's example.
