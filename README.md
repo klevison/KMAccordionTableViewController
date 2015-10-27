@@ -10,7 +10,7 @@ Swift version: https://github.com/klevison/AccordionTableViewController
 
 ## Current Version
 
-Version: 0.2
+Version: 0.2.1
 
 ## Under the Hood
 
